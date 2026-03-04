@@ -1,0 +1,23 @@
+{
+  "extractionDate": "2026-03-04T19:10:00Z",
+  "status": "in_progress",
+  "completed": {
+    "APE": {"count": 16, "status": "complete"},
+    "APF": {"count": 30, "status": "complete"},
+    "APG": {"count": 20, "status": "partial"}
+  },
+  "pending": {
+    "APG_remaining": 23,
+    "APR_series": ["APRF", "APRG", "APRH", "APRI", "APRL"],
+    "APc_series": ["APEc", "APFc", "APGc"],
+    "Medium_pressure": ["EU", "EUM", "TF", "TG", "TH", "TPA", "TQ", "TR", "MPR"],
+    "Low_pressure": ["BP", "BPR", "BT"],
+    "Axials": ["EVF", "EVL", "EVP", "EVT", "EVc"],
+    "c_variants": ["EUc", "EUK", "EUKc", "EUMc", "MPRc", "TFc", "TGc", "THc", "TPALc", "TRc", "TTRc", "BPc", "BPRc", "BPRDc"]
+  },
+  "formula": {
+    "flow": "fMin * pow(fMax/fMin, (svgX - xMin) / (xMax - xMin)) * 60",
+    "pressure": "pMin * pow(pMax/pMin, (yMax - svgY) / (yMax - yMin))",
+    "note": "flow ×60 converts m³/min to m³/h"
+  }
+}
