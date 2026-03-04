@@ -1,6 +1,6 @@
-# Utentra LiveCurve
+# Utentra Fan Selector
 
-Sistema di selezione ventilatori industriali basato su dati Euroventilatori.
+Sistema di selezione ventilatori industriali.
 
 ## Features
 
@@ -9,10 +9,14 @@ Sistema di selezione ventilatori industriali basato su dati Euroventilatori.
 - Curve caratteristiche con conversione logaritmica
 - Precisione: errore <1.5%
 
-## Deploy
+## Categorie
 
-Hostato su Vercel: [link]
+- **Alta Pressione**: APE, APF, APG, APRF, APRG, APRH, APRI, APRL
+- **Media Pressione**: EU, EUM, TF, TG, TH, TPA, TQ, TR, MPR
+- **Bassa Pressione**: BP, BPR, BT
+- **Assiali**: EVF, EVL, EVP, EVT, EVc
+- **Varianti c**: EUc, EUK, EUKc, EUMc, MPRc, TFc, TGc, THc, TPALc, TRc, TTRc, BPc, BPRc, BPRDc
 
-## Dati
+## Live Demo
 
-I dati curve sono in `data/curves.json`
+https://mainoriky01-arch.github.io/utentra-livecurve/
