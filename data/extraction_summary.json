@@ -1,0 +1,227 @@
+{
+  "extractionDate": "2026-03-05T09:07:57.812Z",
+  "totalSeries": 55,
+  "totalModels": 1117,
+  "series": {
+    "APE": {
+      "count": 16,
+      "complete": true
+    },
+    "APF": {
+      "count": 30,
+      "complete": true
+    },
+    "APG": {
+      "count": 43,
+      "complete": true
+    },
+    "APEc": {
+      "count": 10,
+      "complete": true
+    },
+    "APFc": {
+      "count": 7,
+      "complete": true
+    },
+    "APGc": {
+      "count": 8,
+      "complete": true
+    },
+    "APRF": {
+      "count": 42,
+      "complete": true
+    },
+    "APRG": {
+      "count": 44,
+      "complete": true
+    },
+    "APRH": {
+      "count": 31,
+      "complete": true
+    },
+    "APRI": {
+      "count": 26,
+      "complete": true
+    },
+    "APRL": {
+      "count": 9,
+      "complete": true
+    },
+    "APRF/N8": {
+      "count": 9,
+      "complete": true
+    },
+    "APRG/N8": {
+      "count": 30,
+      "complete": true
+    },
+    "APRH/N8": {
+      "count": 18,
+      "complete": true
+    },
+    "APRI/N8": {
+      "count": 18,
+      "complete": true
+    },
+    "APRL/N8": {
+      "count": 16,
+      "complete": true
+    },
+    "APRFc": {
+      "count": 10,
+      "complete": true
+    },
+    "APRGc": {
+      "count": 12,
+      "complete": true
+    },
+    "APRHc": {
+      "count": 11,
+      "complete": true
+    },
+    "APRIc": {
+      "count": 10,
+      "complete": true
+    },
+    "APRLc": {
+      "count": 10,
+      "complete": true
+    },
+    "APRED": {
+      "count": 10,
+      "complete": true
+    },
+    "APRFD": {
+      "count": 22,
+      "complete": true
+    },
+    "APRGD": {
+      "count": 11,
+      "complete": true
+    },
+    "EU": {
+      "count": 25,
+      "complete": true
+    },
+    "EUc": {
+      "count": 20,
+      "complete": true
+    },
+    "EUM": {
+      "count": 23,
+      "complete": true
+    },
+    "EUK": {
+      "count": 49,
+      "complete": true
+    },
+    "EUKc": {
+      "count": 17,
+      "complete": true
+    },
+    "EUMc": {
+      "count": 17,
+      "complete": true
+    },
+    "MPR": {
+      "count": 9,
+      "complete": true
+    },
+    "MPRc": {
+      "count": 5,
+      "complete": true
+    },
+    "TF": {
+      "count": 17,
+      "complete": true
+    },
+    "TFc": {
+      "count": 7,
+      "complete": true
+    },
+    "TG": {
+      "count": 27,
+      "complete": true
+    },
+    "TGc": {
+      "count": 10,
+      "complete": true
+    },
+    "TH": {
+      "count": 31,
+      "complete": true
+    },
+    "THc": {
+      "count": 10,
+      "complete": true
+    },
+    "TPA": {
+      "count": 12,
+      "complete": true
+    },
+    "TPALc": {
+      "count": 3,
+      "complete": true
+    },
+    "TQ": {
+      "count": 7,
+      "complete": true
+    },
+    "TR": {
+      "count": 19,
+      "complete": true
+    },
+    "TRc": {
+      "count": 15,
+      "complete": true
+    },
+    "TTRc": {
+      "count": 10,
+      "complete": true
+    },
+    "BP": {
+      "count": 34,
+      "complete": true
+    },
+    "BPc": {
+      "count": 7,
+      "complete": true
+    },
+    "BPR": {
+      "count": 49,
+      "complete": true
+    },
+    "BPRc": {
+      "count": 26,
+      "complete": true
+    },
+    "BPRDc": {
+      "count": 10,
+      "complete": true
+    },
+    "BT": {
+      "count": 9,
+      "complete": true
+    },
+    "EVc": {
+      "count": 11,
+      "complete": true
+    },
+    "EVF": {
+      "count": 80,
+      "complete": true
+    },
+    "EVL": {
+      "count": 80,
+      "complete": true
+    },
+    "EVP": {
+      "count": 16,
+      "complete": true
+    },
+    "EVT": {
+      "count": 9,
+      "complete": true
+    }
+  }
+}
