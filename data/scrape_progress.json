@@ -1,0 +1,18 @@
+{
+  "completedSeries": [
+    "Products",
+    "APE",
+    "APF",
+    "APG",
+    "APEc",
+    "APFc",
+    "APGc"
+  ],
+  "data": [
+    {
+      "series": "APRF",
+      "model": "APRF 712/C",
+      "error": "page.$: Target page, context or browser has been closed"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "extracted": "2026-03-06",
+  "total": 228,
+  "note": "Raw path data from LiveCurve, format: x y x y...",
+  "series": {
+    "EVF": 80,
+    "EVL": 80,
+    "EVP": 16,
+    "EVT": 9,
+    "APRED": 10,
+    "APRFD": 22,
+    "APRGD": 11
+  }
+}
