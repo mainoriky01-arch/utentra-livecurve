@@ -737,11 +737,33 @@ function updateAllDisplays() {
         flowInput.placeholder = `Range: ${formatValue(fMin, flowConv.decimals)}–${formatValue(fMax, flowConv.decimals)}`;
     }
     
-    // Update chart axis labels
-    if (chart) {
+    // Update chart with converted data
+    if (chart && currentModel) {
+        // Convert curve data to selected units
+        const totalConverted = currentModel.total.map(p => ({
+            x: convertFlow(p[0], units.flow),
+            y: convertPressure(p[1], units.pressure)
+        }));
+        const staticConverted = currentModel.static.map(p => ({
+            x: convertFlow(p[0], units.flow),
+            y: convertPressure(p[1], units.pressure)
+        }));
+        
+        chart.data.datasets[0].data = totalConverted;
+        chart.data.datasets[1].data = staticConverted;
+        
+        // Update operating point if exists
+        if (rawValues.flowRate !== null && rawValues.totalPressure !== null) {
+            chart.data.datasets[2].data = [{
+                x: convertFlow(rawValues.flowRate, units.flow),
+                y: convertPressure(rawValues.totalPressure, units.pressure)
+            }];
+        }
+        
+        // Update axis labels
         chart.options.scales.x.title.text = `Portata Q (${flowConv.symbol})`;
         chart.options.scales.y.title.text = `Pressione P (${pressConv.symbol})`;
-        chart.update('none');
+        chart.update();
     }
 }
 
@@ -905,14 +927,6 @@ function loadModel(seriesName, modelName) {
 
     currentModel = CURVES[seriesName][modelName];
     hasOperatingPoint = false;
-
-    const total = currentModel.total.map(p => ({x: p[0], y: p[1]}));
-    const stat  = currentModel.static.map(p => ({x: p[0], y: p[1]}));
-
-    chart.data.datasets[0].data = total;
-    chart.data.datasets[1].data = stat;
-    chart.data.datasets[2].data = [];
-    chart.update();
 
     // Hide empty state
     document.getElementById('chartEmpty').style.display = 'none';
