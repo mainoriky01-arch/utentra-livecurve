@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utentra - Fast Selection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #080D1A;
+            --bg-card: rgba(255,255,255,0.03);
+            --bg-input: rgba(0,0,0,0.4);
+            --border: rgba(255,255,255,0.08);
+            --border-focus: #3B82F6;
+            --text-primary: #F0F4FF;
+            --text-secondary: #8A9BBF;
+            --text-muted: #4A5A7A;
+            --blue-400: #60A5FA;
+            --blue-500: #3B82F6;
+            --green-400: #34D399;
+            --green-500: #10B981;
+            --amber-400: #FBBF24;
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 14px;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            min-height: 100vh;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255,255,255,0.02);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .header-logo {
+            width: 32px;
+            height: 32px;
+            color: var(--blue-500);
+        }
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .header h1 span { color: var(--green-400); }
+        .badge {
+            background: rgba(16,185,129,0.15);
+            color: var(--green-400);
+            font-size: 10px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Main */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        /* Search Panel */
+        .search-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .search-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: var(--green-400);
+        }
+        .search-header h2 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* Input Grid */
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .input-group label {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .input-row {
+            display: flex;
+            gap: 8px;
+        }
+        .input-row input {
+            flex: 1;
+        }
+        .input-row select {
+            width: 100px;
+        }
+        input, select {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            padding: 10px 14px;
+            transition: border-color 0.2s;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--border-focus);
+        }
+        input::placeholder {
+            color: var(--text-muted);
+        }
+
+        /* Filters */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+        .filter-group h4 {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .filter-chip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            padding: 6px 12px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .filter-chip:hover {
+            border-color: var(--blue-500);
+            color: var(--text-primary);
+        }
+        .filter-chip.active {
+            background: rgba(59,130,246,0.15);
+            border-color: var(--blue-500);
+            color: var(--blue-400);
+        }
+        .filter-chip input {
+            display: none;
+        }
+
+        /* Search Button */
+        .search-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--green-500), #059669);
+            border: none;
+            border-radius: var(--radius-md);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 14px 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: transform 0.1s, box-shadow 0.2s;
+        }
+        .search-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px rgba(16,185,129,0.3);
+        }
+        .search-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Results */
+        .results-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        .results-header h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        .results-count {
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+            color: var(--green-400);
+        }
+
+        .results-grid {
+            display: grid;
+            gap: 12px;
+        }
+        .result-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            display: grid;
+            grid-template-columns: 1fr auto auto auto;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .result-card:hover {
+            border-color: var(--blue-500);
+            background: rgba(59,130,246,0.03);
+        }
+        .result-model {
+            font-family: 'Fira Code', monospace;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .result-series {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        .result-stat {
+            text-align: center;
+        }
+        .result-stat-value {
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--blue-400);
+        }
+        .result-stat-label {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .result-match {
+            background: rgba(16,185,129,0.15);
+            color: var(--green-400);
+            font-family: 'Fira Code', monospace;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 100px;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+        .empty-state svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+        .empty-state p {
+            font-size: 14px;
+        }
+
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .result-card {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .result-stats {
+                display: flex;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <svg class="header-logo" viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="16" r="3.5" fill="currentColor"/>
+                <path d="M16 5c0-1.657 1.343-3 3-3s3 1.343 3 3c0 3.314-2.686 6-6 6V5z" fill="currentColor" opacity="0.85"/>
+                <path d="M27 16c1.657 0 3 1.343 3 3s-1.343 3-3 3c-3.314 0-6-2.686-6-6h6z" fill="currentColor" opacity="0.7"/>
+                <path d="M16 27c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-3.314 2.686-6 6-6v6z" fill="currentColor" opacity="0.55"/>
+                <path d="M5 16c-1.657 0-3-1.343-3-3s1.343-3 3-3c3.314 0 6 2.686 6 6H5z" fill="currentColor" opacity="0.4"/>
+            </svg>
+            <h1><span>Utentra</span> Fast Selection</h1>
+            <span class="badge">Ricerca Rapida</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Search Panel -->
+        <section class="search-panel">
+            <div class="search-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+                <h2>Ricerca Rapida Ventilatori</h2>
+            </div>
+
+            <div class="input-grid">
+                <div class="input-group">
+                    <label>Portata Richiesta</label>
+                    <div class="input-row">
+                        <input type="number" id="targetFlow" placeholder="es. 5000" step="1">
+                        <select id="flowUnit">
+                            <option value="m3h">m³/h</option>
+                            <option value="m3min">m³/min</option>
+                            <option value="cfm">cfm</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Pressione Richiesta</label>
+                    <div class="input-row">
+                        <input type="number" id="targetPressure" placeholder="es. 300" step="1">
+                        <select id="pressureUnit">
+                            <option value="kgm2">kg/m²</option>
+                            <option value="pa">Pa</option>
+                            <option value="inwg">in wg</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <h4>Tipo Pressione</h4>
+                    <div class="filter-options">
+                        <label class="filter-chip active">
+                            <input type="checkbox" name="pressure" value="alta" checked>
+                            Alta
+                        </label>
+                        <label class="filter-chip active">
+                            <input type="checkbox" name="pressure" value="media" checked>
+                            Media
+                        </label>
+                        <label class="filter-chip active">
+                            <input type="checkbox" name="pressure" value="bassa" checked>
+                            Bassa
+                        </label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h4>Serie</h4>
+                    <div class="filter-options" id="seriesFilters">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <button class="search-btn" id="searchBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                CERCA VENTILATORI
+            </button>
+        </section>
+
+        <!-- Results -->
+        <section id="resultsSection" style="display:none;">
+            <div class="results-header">
+                <h3>Ventilatori Compatibili</h3>
+                <span class="results-count" id="resultsCount">0 risultati</span>
+            </div>
+            <div class="results-grid" id="resultsGrid"></div>
+        </section>
+
+        <div class="empty-state" id="emptyState">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <p>Inserisci portata e pressione per trovare i ventilatori compatibili</p>
+        </div>
+    </main>
+
+<script>
+let CURVES = {};
+
+// Unit conversions
+const flowConversions = {
+    m3h:   { factor: 1,       symbol: 'm³/h' },
+    m3min: { factor: 1/60,    symbol: 'm³/min' },
+    cfm:   { factor: 0.58858, symbol: 'cfm' }
+};
+const pressureConversions = {
+    kgm2: { factor: 1,       symbol: 'kg/m²' },
+    pa:   { factor: 9.80665, symbol: 'Pa' },
+    inwg: { factor: 0.03937, symbol: 'in wg' }
+};
+
+// Convert to base units
+function toBaseFlow(value, unit) {
+    return value / flowConversions[unit].factor;
+}
+function toBasePressure(value, unit) {
+    return value / pressureConversions[unit].factor;
+}
+
+// Interpolate pressure at given flow
+function interpolate(arr, x) {
+    for (let i = 0; i < arr.length - 1; i++) {
+        const [x1, y1] = arr[i];
+        const [x2, y2] = arr[i + 1];
+        if ((x >= x1 && x <= x2) || (x <= x1 && x >= x2)) {
+            const t = (x - x1) / (x2 - x1);
+            return y1 + t * (y2 - y1);
+        }
+    }
+    return null;
+}
+
+// Check if model covers the operating point
+function checkModel(model, targetFlow, targetPressure) {
+    // Check if flow is in range
+    const flowMin = Math.min(model.total[0][0], model.total[model.total.length-1][0]);
+    const flowMax = Math.max(model.total[0][0], model.total[model.total.length-1][0]);
+    
+    if (targetFlow < flowMin || targetFlow > flowMax) {
+        return null;
+    }
+    
+    // Get pressure at target flow
+    const totalP = interpolate(model.total, targetFlow);
+    const staticP = interpolate(model.static, targetFlow);
+    
+    if (totalP === null) return null;
+    
+    // Check if target pressure is achievable (below total pressure curve)
+    if (targetPressure > totalP) {
+        return null;
+    }
+    
+    // Calculate match score (how close to optimal point)
+    const margin = totalP - targetPressure;
+    const marginPercent = (margin / totalP) * 100;
+    
+    return {
+        totalPressure: totalP,
+        staticPressure: staticP,
+        margin: margin,
+        marginPercent: marginPercent,
+        efficiency: Math.max(0, 100 - marginPercent) // Simple efficiency estimate
+    };
+}
+
+// Search for compatible fans
+function search() {
+    const flowInput = parseFloat(document.getElementById('targetFlow').value);
+    const pressureInput = parseFloat(document.getElementById('targetPressure').value);
+    const flowUnit = document.getElementById('flowUnit').value;
+    const pressureUnit = document.getElementById('pressureUnit').value;
+    
+    if (!flowInput || !pressureInput) {
+        alert('Inserisci portata e pressione');
+        return;
+    }
+    
+    // Convert to base units
+    const targetFlow = toBaseFlow(flowInput, flowUnit);
+    const targetPressure = toBasePressure(pressureInput, pressureUnit);
+    
+    // Get active series filters
+    const activeSeriesEls = document.querySelectorAll('#seriesFilters .filter-chip.active');
+    const activeSeries = new Set();
+    activeSeriesEls.forEach(el => activeSeries.add(el.dataset.series));
+    
+    // Search all models
+    const results = [];
+    
+    for (const [seriesName, models] of Object.entries(CURVES)) {
+        // Skip if series not in filter
+        if (activeSeries.size > 0 && !activeSeries.has(seriesName)) continue;
+        
+        for (const [modelName, model] of Object.entries(models)) {
+            const match = checkModel(model, targetFlow, targetPressure);
+            if (match) {
+                results.push({
+                    series: seriesName,
+                    model: modelName,
+                    ...match
+                });
+            }
+        }
+    }
+    
+    // Sort by efficiency (closest match first)
+    results.sort((a, b) => b.efficiency - a.efficiency);
+    
+    displayResults(results, pressureUnit);
+}
+
+function displayResults(results, pressureUnit) {
+    const resultsSection = document.getElementById('resultsSection');
+    const resultsGrid = document.getElementById('resultsGrid');
+    const resultsCount = document.getElementById('resultsCount');
+    const emptyState = document.getElementById('emptyState');
+    
+    if (results.length === 0) {
+        resultsSection.style.display = 'none';
+        emptyState.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="15" y1="9" x2="9" y2="15"/>
+                <line x1="9" y1="9" x2="15" y2="15"/>
+            </svg>
+            <p>Nessun ventilatore trovato per i parametri specificati</p>
+        `;
+        emptyState.style.display = 'block';
+        return;
+    }
+    
+    emptyState.style.display = 'none';
+    resultsSection.style.display = 'block';
+    resultsCount.textContent = `${results.length} risultat${results.length === 1 ? 'o' : 'i'}`;
+    
+    const conv = pressureConversions[pressureUnit];
+    
+    resultsGrid.innerHTML = results.slice(0, 50).map(r => {
+        const ptDisplay = (r.totalPressure * conv.factor).toFixed(conv.factor === 1 ? 1 : 0);
+        const psDisplay = (r.staticPressure * conv.factor).toFixed(conv.factor === 1 ? 1 : 0);
+        
+        return `
+            <div class="result-card" onclick="selectFan('${r.series}', '${r.model}')">
+                <div>
+                    <div class="result-model">${r.model}</div>
+                    <div class="result-series">Serie ${r.series}</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-stat-value">${ptDisplay}</div>
+                    <div class="result-stat-label">PT ${conv.symbol}</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-stat-value">${psDisplay}</div>
+                    <div class="result-stat-label">PS ${conv.symbol}</div>
+                </div>
+                <div class="result-match">${r.efficiency.toFixed(0)}% match</div>
+            </div>
+        `;
+    }).join('');
+}
+
+function selectFan(series, model) {
+    // Open in Fan Selector
+    const url = `fan-selector.html?series=${encodeURIComponent(series)}&model=${encodeURIComponent(model)}`;
+    window.location.href = url;
+}
+
+// Initialize
+async function init() {
+    try {
+        const res = await fetch('curves.json');
+        CURVES = await res.json();
+        
+        // Populate series filters
+        const seriesFilters = document.getElementById('seriesFilters');
+        const series = Object.keys(CURVES).sort();
+        seriesFilters.innerHTML = series.map(s => `
+            <label class="filter-chip active" data-series="${s}">
+                <input type="checkbox" checked>
+                ${s}
+            </label>
+        `).join('');
+        
+        // Add click handlers for filters
+        document.querySelectorAll('.filter-chip').forEach(chip => {
+            chip.addEventListener('click', function(e) {
+                if (e.target.tagName !== 'INPUT') {
+                    const input = this.querySelector('input');
+                    if (input) input.checked = !input.checked;
+                }
+                this.classList.toggle('active');
+            });
+        });
+        
+        // Search button
+        document.getElementById('searchBtn').addEventListener('click', search);
+        
+        // Enter key
+        document.querySelectorAll('input[type="number"]').forEach(input => {
+            input.addEventListener('keypress', e => {
+                if (e.key === 'Enter') search();
+            });
+        });
+        
+    } catch (err) {
+        console.error('Errore caricamento dati:', err);
+    }
+}
+
+init();
+</script>
+</body>
+</html>

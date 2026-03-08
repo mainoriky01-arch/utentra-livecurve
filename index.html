@@ -3,1300 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utentra — Fan Selector Industriale</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Utentra - Selezione Ventilatori Industriali</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* ─── Reset & Base ─── */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
         :root {
-            --bg-base:       #080D1A;
-            --bg-surface:    #0D1526;
-            --bg-card:       rgba(255,255,255,0.04);
-            --bg-card-hover: rgba(255,255,255,0.07);
-            --border:        rgba(255,255,255,0.08);
-            --border-focus:  #3B82F6;
-
-            --blue-100: #DBEAFE;
-            --blue-400: #60A5FA;
+            --bg-primary: #080D1A;
+            --bg-card: rgba(255,255,255,0.03);
+            --border: rgba(255,255,255,0.08);
+            --text-primary: #F0F4FF;
+            --text-secondary: #8A9BBF;
             --blue-500: #3B82F6;
-            --blue-600: #2563EB;
-            --blue-700: #1D4ED8;
-
-            --amber-400: #FBBF24;
-            --amber-500: #F59E0B;
-
             --green-400: #34D399;
             --green-500: #10B981;
-
-            --text-primary:  #F0F4FF;
-            --text-secondary:#8A9BBF;
-            --text-muted:    #4A5A7A;
-
-            --radius-sm: 6px;
-            --radius-md: 10px;
-            --radius-lg: 16px;
-
-            --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+            --amber-400: #FBBF24;
         }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background-color: var(--bg-base);
-            background-image:
-                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59,130,246,0.12) 0%, transparent 60%);
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
             min-height: 100vh;
             color: var(--text-primary);
-            line-height: 1.6;
-        }
-
-        /* ─── Header ─── */
-        .header {
-            background: rgba(8,13,26,0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            padding: 0 24px;
-            position: sticky;
-            top: 0;
-            z-index: 50;
-        }
-        .header-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .header-logo {
-            width: 32px; height: 32px; flex-shrink: 0;
-            color: var(--blue-500);
-        }
-        .header-title {
-            font-size: 18px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: var(--text-primary);
-        }
-        .header-title span { color: var(--blue-400); }
-        .header-badge {
-            margin-left: 8px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--blue-400);
-            background: rgba(59,130,246,0.12);
-            border: 1px solid rgba(59,130,246,0.25);
-            padding: 2px 8px;
-            border-radius: 100px;
-        }
-        .header-model-info {
-            margin-left: auto;
-            font-size: 13px;
-            color: var(--text-secondary);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .header-model-info strong { color: var(--blue-400); font-family: 'Fira Code', monospace; font-size: 14px; }
-
-        /* ─── Main Layout ─── */
-        .container { max-width: 1400px; margin: 0 auto; padding: 24px 20px; }
-
-        /* ─── Steps ─── */
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-        @media (max-width: 768px) {
-            .steps { grid-template-columns: 1fr; }
-        }
-
-        .step {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 18px 20px;
-            transition: border-color var(--transition), background var(--transition);
-            position: relative;
-        }
-        .step.active {
-            border-color: rgba(59,130,246,0.4);
-            background: rgba(59,130,246,0.06);
-        }
-        .step.completed {
-            border-color: rgba(52,211,153,0.3);
-        }
-
-        .step-num {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px; height: 24px;
-            border-radius: 50%;
-            font-size: 11px;
-            font-weight: 700;
-            background: var(--text-muted);
-            color: var(--bg-base);
-            margin-bottom: 10px;
-            flex-shrink: 0;
-            transition: background var(--transition);
-        }
-        .step.active .step-num { background: var(--blue-500); }
-        .step.completed .step-num { background: var(--green-500); }
-
-        .step-label {
-            display: block;
-            font-size: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-        }
-        .step.active .step-label { color: var(--blue-400); }
-        .step.completed .step-label { color: var(--green-400); }
-
-        /* ─── Form Controls ─── */
-        select, input[type="number"] {
-            width: 100%;
-            padding: 10px 12px;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            background: rgba(0,0,0,0.3);
-            color: var(--text-primary);
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            transition: border-color var(--transition), box-shadow var(--transition);
-            -webkit-appearance: none;
-            cursor: pointer;
-        }
-        select:focus, input[type="number"]:focus {
-            outline: none;
-            border-color: var(--border-focus);
-            box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
-        }
-        select:disabled, input[type="number"]:disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
-        }
-        select option { background: #0D1526; }
-
-        /* Result inline */
-        .result-display {
-            font-family: 'Fira Code', monospace;
-            font-size: 13px;
-            color: var(--blue-400);
-            padding: 10px 12px;
-            background: rgba(59,130,246,0.08);
-            border: 1px solid rgba(59,130,246,0.2);
-            border-radius: var(--radius-md);
-            min-height: 42px;
-            display: flex;
-            align-items: center;
-            word-break: break-all;
-            line-height: 1.4;
-        }
-        .result-display.out-range {
-            color: var(--amber-400);
-            background: rgba(245,158,11,0.08);
-            border-color: rgba(245,158,11,0.2);
-        }
-        .result-display.empty { color: var(--text-muted); }
-
-        /* ─── Chart Section ─── */
-        .chart-section {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .chart-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 16px;
-        }
-        .chart-title {
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-secondary);
-        }
-        .chart-legend {
-            margin-left: auto;
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
-        .legend-dot {
-            width: 20px; height: 2px;
-            border-radius: 2px;
-        }
-        .chart-wrapper {
-            position: relative;
-            height: 380px;
-        }
-        @media (max-width: 768px) {
-            .chart-wrapper { height: 260px; }
-        }
-
-        /* Empty chart state */
-        .chart-empty {
-            position: absolute;
-            inset: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            color: var(--text-muted);
+            padding: 24px;
         }
-        .chart-empty svg { opacity: 0.3; }
-        .chart-empty p { font-size: 14px; }
-
-        /* ─── Data Cards ─── */
-        .data-grid {
+        .logo {
+            width: 64px;
+            height: 64px;
+            color: var(--blue-500);
+            margin-bottom: 24px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        h1 span { color: var(--green-400); }
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 48px;
+        }
+        .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 700px;
+            width: 100%;
+        }
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+        }
+        .card:hover {
+            border-color: var(--blue-500);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(59,130,246,0.15);
+        }
+        .card-icon {
+            width: 48px;
+            height: 48px;
             margin-bottom: 20px;
         }
-
-        .data-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 16px 18px;
-            transition: border-color var(--transition);
-        }
-        .data-card.highlight {
-            background: rgba(59,130,246,0.07);
-            border-color: rgba(59,130,246,0.3);
-        }
-        .data-card .card-label {
-            font-size: 10px;
+        .card-icon.green { color: var(--green-400); }
+        .card-icon.blue { color: var(--blue-500); }
+        .card h2 {
+            font-size: 20px;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
             margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
         }
-        .data-card .card-value {
-            font-family: 'Fira Code', monospace;
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--text-primary);
-            letter-spacing: -0.02em;
-            line-height: 1;
-        }
-        .data-card.highlight .card-value { color: var(--blue-400); }
-        .data-card .card-unit {
-            font-size: 11px;
-            color: var(--text-muted);
-            margin-top: 4px;
-            font-family: 'Fira Code', monospace;
-        }
-
-        /* Dynamic pressure card */
-        .data-card.amber .card-value { color: var(--amber-400); }
-        .data-card.amber { background: rgba(245,158,11,0.05); border-color: rgba(245,158,11,0.2); }
-
-        /* ─── Unit Selectors ─── */
-        .unit-selectors {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 16px;
-            flex-wrap: wrap;
-        }
-        .unit-group {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 8px 14px;
-        }
-        .unit-group label {
-            font-size: 11px;
-            font-weight: 500;
+        .card p {
             color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            white-space: nowrap;
+            font-size: 14px;
+            line-height: 1.5;
         }
-        .unit-group select {
-            background: rgba(0,0,0,0.3);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            color: var(--text-primary);
-            font-family: 'Fira Code', monospace;
-            font-size: 13px;
-            padding: 6px 28px 6px 10px;
-            cursor: pointer;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238A9BBF' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 8px center;
-            transition: border-color var(--transition);
-        }
-        .unit-group select:hover,
-        .unit-group select:focus {
-            border-color: var(--blue-500);
-        }
-
-        /* ─── Info Footer ─── */
-        .info-footer {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 16px 20px;
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-        .info-footer-icon { color: var(--blue-500); flex-shrink: 0; margin-top: 2px; }
-        .info-footer-content { flex: 1; min-width: 200px; }
-        .info-footer h3 {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 4px;
-        }
-        .info-footer p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
-        .series-chips {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
-        .chip {
-            font-family: 'Fira Code', monospace;
+        .badge {
+            display: inline-block;
+            background: rgba(16,185,129,0.15);
+            color: var(--green-400);
             font-size: 11px;
-            background: rgba(59,130,246,0.1);
-            border: 1px solid rgba(59,130,246,0.2);
-            color: var(--blue-400);
-            padding: 3px 10px;
+            font-weight: 600;
+            padding: 4px 10px;
             border-radius: 100px;
-            white-space: nowrap;
+            margin-top: 16px;
         }
-        .chip strong { color: var(--blue-300); }
-
-        /* ─── Loading skeleton ─── */
-        @keyframes shimmer {
-            0% { background-position: -400px 0; }
-            100% { background-position: 400px 0; }
+        .badge.blue {
+            background: rgba(59,130,246,0.15);
+            color: var(--blue-500);
         }
-        .skeleton {
-            background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.07) 50%, rgba(255,255,255,0.03) 75%);
-            background-size: 800px 100%;
-            animation: shimmer 1.5s infinite;
-            border-radius: 4px;
-            height: 16px;
+        .stats {
+            margin-top: 48px;
+            display: flex;
+            gap: 32px;
+            color: var(--text-secondary);
+            font-size: 14px;
         }
-
-        /* ─── Accessibility ─── */
-        :focus-visible {
-            outline: 2px solid var(--blue-500);
-            outline-offset: 2px;
+        .stats strong {
+            color: var(--green-400);
+            font-weight: 600;
         }
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-        }
-
-        /* ─── Scrollbar ─── */
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 3px; }
     </style>
 </head>
 <body>
-
-    <!-- ─── Header ─── -->
-    <header class="header" role="banner">
-        <div class="header-inner">
-            <!-- Fan icon SVG -->
-            <svg class="header-logo" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-                <circle cx="16" cy="16" r="3.5" fill="currentColor"/>
-                <path d="M16 5c0-1.657 1.343-3 3-3s3 1.343 3 3c0 3.314-2.686 6-6 6V5z" fill="currentColor" opacity="0.85"/>
-                <path d="M27 16c1.657 0 3 1.343 3 3s-1.343 3-3 3c-3.314 0-6-2.686-6-6h6z" fill="currentColor" opacity="0.7"/>
-                <path d="M16 27c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-3.314 2.686-6 6-6v6z" fill="currentColor" opacity="0.55"/>
-                <path d="M5 16c-1.657 0-3-1.343-3-3s1.343-3 3-3c3.314 0 6 2.686 6 6H5z" fill="currentColor" opacity="0.4"/>
+    <svg class="logo" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="3.5" fill="currentColor"/>
+        <path d="M16 5c0-1.657 1.343-3 3-3s3 1.343 3 3c0 3.314-2.686 6-6 6V5z" fill="currentColor" opacity="0.85"/>
+        <path d="M27 16c1.657 0 3 1.343 3 3s-1.343 3-3 3c-3.314 0-6-2.686-6-6h6z" fill="currentColor" opacity="0.7"/>
+        <path d="M16 27c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-3.314 2.686-6 6-6v6z" fill="currentColor" opacity="0.55"/>
+        <path d="M5 16c-1.657 0-3-1.343-3-3s1.343-3 3-3c3.314 0 6 2.686 6 6H5z" fill="currentColor" opacity="0.4"/>
+    </svg>
+    
+    <h1><span>Utentra</span> Fan Tools</h1>
+    <p class="subtitle">Selezione ventilatori industriali Euroventilatori</p>
+    
+    <div class="cards">
+        <a href="fast-selection.html" class="card">
+            <svg class="card-icon green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
-
-            <h1 class="header-title"><span>Utentra</span> Fan Selector</h1>
-            <span class="header-badge">Industriale</span>
-            <div class="header-model-info" id="headerModelInfo" aria-live="polite"></div>
-        </div>
-    </header>
-
-    <!-- ─── Main ─── -->
-    <main class="container" role="main">
-
-        <!-- ─── Step Controls ─── -->
-        <div class="steps" role="group" aria-label="Passi di selezione ventilatore">
-
-            <!-- Step 1: Series -->
-            <div class="step active" id="step1">
-                <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-                    <span class="step-num" aria-hidden="true">1</span>
-                    <span class="step-label">Serie Ventilatore</span>
-                </div>
-                <label for="series" class="visually-hidden">Seleziona la serie</label>
-                <select id="series" aria-label="Seleziona serie ventilatore">
-                    <option value="">Caricamento serie...</option>
-                </select>
-            </div>
-
-            <!-- Step 2: Model -->
-            <div class="step" id="step2">
-                <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-                    <span class="step-num" aria-hidden="true">2</span>
-                    <span class="step-label">Modello</span>
-                </div>
-                <label for="model" class="visually-hidden">Seleziona il modello</label>
-                <select id="model" disabled aria-label="Seleziona modello ventilatore" aria-disabled="true">
-                    <option value="">Prima seleziona serie...</option>
-                </select>
-            </div>
-
-            <!-- Step 3: Flow Rate -->
-            <div class="step" id="step3">
-                <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-                    <span class="step-num" aria-hidden="true">3</span>
-                    <span class="step-label">Portata — m³/h</span>
-                </div>
-                <input
-                    type="number"
-                    id="flowRate"
-                    placeholder="es. 5000"
-                    disabled
-                    step="1"
-                    min="0"
-                    aria-label="Inserisci portata in m³/h"
-                    aria-disabled="true"
-                >
-                <div id="result" class="result-display empty" style="margin-top:8px;" role="status" aria-live="polite" aria-atomic="true">
-                    Inserisci una portata
-                </div>
-            </div>
-        </div>
-
-        <!-- ─── Chart ─── -->
-        <section class="chart-section" aria-label="Grafico curve caratteristiche">
-            <div class="chart-header">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="color:var(--text-secondary)">
-                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                </svg>
-                <span class="chart-title">Curve Caratteristiche</span>
-                <div class="chart-legend" aria-label="Legenda grafico">
-                    <span class="legend-item">
-                        <span class="legend-dot" style="background:#3B82F6;" aria-hidden="true"></span>
-                        Pressione Totale
-                    </span>
-                    <span class="legend-item">
-                        <span class="legend-dot" style="background:#34D399;" aria-hidden="true"></span>
-                        Pressione Statica
-                    </span>
-                    <span class="legend-item">
-                        <span style="width:10px;height:10px;border-radius:50%;background:#F59E0B;display:inline-block;" aria-hidden="true"></span>
-                        Punto Operativo
-                    </span>
-                </div>
-            </div>
-            <div class="chart-wrapper">
-                <div class="chart-empty" id="chartEmpty" aria-label="Grafico vuoto - seleziona un modello">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" style="color:var(--text-secondary)">
-                        <path d="M3 3v18h18"/>
-                        <path d="M7 16l4-4 4 4 5-5"/>
-                    </svg>
-                    <p>Seleziona serie e modello per visualizzare le curve</p>
-                </div>
-                <canvas id="curveChart" aria-label="Grafico scatter curve pressione-portata" role="img"></canvas>
-            </div>
-        </section>
-
-        <!-- ─── Unit Selectors ─── -->
-        <div class="unit-selectors">
-            <div class="unit-group">
-                <label for="flowUnit">Unità Portata</label>
-                <select id="flowUnit" aria-label="Seleziona unità di misura portata">
-                    <option value="m3h" selected>m³/h</option>
-                    <option value="m3min">m³/min</option>
-                    <option value="m3s">m³/s</option>
-                    <option value="cfm">cfm</option>
-                </select>
-            </div>
-            <div class="unit-group">
-                <label for="pressureUnit">Unità Pressione</label>
-                <select id="pressureUnit" aria-label="Seleziona unità di misura pressione">
-                    <option value="kgm2" selected>kg/m²</option>
-                    <option value="pa">Pa</option>
-                    <option value="inwg">in wg</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- ─── Data Cards ─── -->
-        <div class="data-grid" role="region" aria-label="Dati tecnici ventilatore">
-
-            <div class="data-card highlight" aria-label="Pressione Totale">
-                <div class="card-label">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    Pressione Totale
-                </div>
-                <div class="card-value" id="totalPressure">—</div>
-                <div class="card-unit pressure-unit">kg/m²</div>
-            </div>
-
-            <div class="data-card" aria-label="Pressione Statica">
-                <div class="card-label">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    Pressione Statica
-                </div>
-                <div class="card-value" id="staticPressure">—</div>
-                <div class="card-unit pressure-unit">kg/m²</div>
-            </div>
-
-            <div class="data-card amber" aria-label="Pressione Dinamica">
-                <div class="card-label">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
-                    Pressione Dinamica
-                </div>
-                <div class="card-value" id="dynamicPressure">—</div>
-                <div class="card-unit pressure-unit">kg/m²</div>
-            </div>
-
-            <div class="data-card" aria-label="Range Portata">
-                <div class="card-label">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-                    Range Portata
-                </div>
-                <div class="card-value" id="flowRange" style="font-size:16px;line-height:1.4;">—</div>
-                <div class="card-unit flow-unit">m³/h</div>
-            </div>
-
-            <div class="data-card" aria-label="Range Pressione">
-                <div class="card-label">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                    Range Pressione
-                </div>
-                <div class="card-value" id="pressureRange" style="font-size:16px;line-height:1.4;">—</div>
-                <div class="card-unit pressure-unit">kg/m²</div>
-            </div>
-        </div>
-
-        <!-- ─── Info Footer ─── -->
-        <footer class="info-footer" role="contentinfo">
-            <svg class="info-footer-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="12" y1="8" x2="12" y2="12"/>
-                <line x1="12" y1="16" x2="12.01" y2="16"/>
+            <h2>Fast Selection</h2>
+            <p>Trova rapidamente i ventilatori compatibili inserendo portata e pressione desiderate.</p>
+            <span class="badge">Ricerca Rapida</span>
+        </a>
+        
+        <a href="fan-selector.html" class="card">
+            <svg class="card-icon blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
             </svg>
-            <div class="info-footer-content">
-                <h3>Dati LiveCurve — Euroventilatori</h3>
-                <p>Curve caratteristiche estratte con precisione verificata &lt;0.1% — <strong id="modelCount">…</strong> modelli disponibili</p>
-                <div class="series-chips" id="seriesChips" aria-label="Serie disponibili"></div>
-            </div>
-        </footer>
-
-    </main>
-
-    <!-- Visually hidden helper class -->
-    <style>
-        .visually-hidden {
-            position: absolute; width: 1px; height: 1px;
-            padding: 0; margin: -1px; overflow: hidden;
-            clip: rect(0,0,0,0); white-space: nowrap; border: 0;
-        }
-    </style>
-
-<script>
-/* ─── State ─── */
-let CURVES = {};
-let chart = null;
-let currentModel = null;
-let hasOperatingPoint = false;
-
-// Store raw values in base units (m³/h, kg/m²)
-let rawValues = {
-    totalPressure: null,
-    staticPressure: null,
-    dynamicPressure: null,
-    flowRate: null,
-    flowMin: null,
-    flowMax: null,
-    pressureMin: null,
-    pressureMax: null
-};
-
-/* ─── Unit Conversion ─── */
-const flowConversions = {
-    m3h:   { factor: 1,        symbol: 'm³/h',   decimals: 0 },
-    m3min: { factor: 1/60,     symbol: 'm³/min', decimals: 2 },
-    m3s:   { factor: 1/3600,   symbol: 'm³/s',   decimals: 4 },
-    cfm:   { factor: 0.58858,  symbol: 'cfm',    decimals: 0 }
-};
-
-const pressureConversions = {
-    kgm2: { factor: 1,        symbol: 'kg/m²', decimals: 2 },
-    pa:   { factor: 9.80665,  symbol: 'Pa',    decimals: 0 },
-    inwg: { factor: 0.03937,  symbol: 'in wg', decimals: 3 }
-};
-
-function convertFlow(valueM3h, toUnit) {
-    if (valueM3h === null || valueM3h === undefined) return null;
-    const conv = flowConversions[toUnit];
-    return valueM3h * conv.factor;
-}
-
-function convertPressure(valueKgm2, toUnit) {
-    if (valueKgm2 === null || valueKgm2 === undefined) return null;
-    const conv = pressureConversions[toUnit];
-    return valueKgm2 * conv.factor;
-}
-
-function formatValue(value, decimals) {
-    if (value === null || value === undefined) return '—';
-    return value.toFixed(decimals);
-}
-
-function getCurrentUnits() {
-    return {
-        flow: document.getElementById('flowUnit').value,
-        pressure: document.getElementById('pressureUnit').value
-    };
-}
-
-function updateAllDisplays() {
-    const units = getCurrentUnits();
-    const flowConv = flowConversions[units.flow];
-    const pressConv = pressureConversions[units.pressure];
+            <h2>Fan Selector</h2>
+            <p>Esplora le curve caratteristiche di ogni modello con grafico interattivo.</p>
+            <span class="badge blue">Analisi Dettagliata</span>
+        </a>
+    </div>
     
-    // Update pressure values
-    document.getElementById('totalPressure').textContent = 
-        formatValue(convertPressure(rawValues.totalPressure, units.pressure), pressConv.decimals);
-    document.getElementById('staticPressure').textContent = 
-        formatValue(convertPressure(rawValues.staticPressure, units.pressure), pressConv.decimals);
-    document.getElementById('dynamicPressure').textContent = 
-        formatValue(convertPressure(rawValues.dynamicPressure, units.pressure), pressConv.decimals);
-    
-    // Update ranges
-    if (rawValues.flowMin !== null && rawValues.flowMax !== null) {
-        const fMin = convertFlow(rawValues.flowMin, units.flow);
-        const fMax = convertFlow(rawValues.flowMax, units.flow);
-        document.getElementById('flowRange').textContent = 
-            `${formatValue(fMin, flowConv.decimals)}–${formatValue(fMax, flowConv.decimals)}`;
-    }
-    if (rawValues.pressureMin !== null && rawValues.pressureMax !== null) {
-        const pMin = convertPressure(rawValues.pressureMin, units.pressure);
-        const pMax = convertPressure(rawValues.pressureMax, units.pressure);
-        document.getElementById('pressureRange').textContent = 
-            `${formatValue(pMin, pressConv.decimals)}–${formatValue(pMax, pressConv.decimals)}`;
-    }
-    
-    // Update unit labels
-    document.querySelectorAll('.pressure-unit').forEach(el => el.textContent = pressConv.symbol);
-    document.querySelectorAll('.flow-unit').forEach(el => el.textContent = flowConv.symbol);
-    
-    // Update result display
-    if (rawValues.totalPressure !== null) {
-        const pt = convertPressure(rawValues.totalPressure, units.pressure);
-        const ps = convertPressure(rawValues.staticPressure, units.pressure);
-        const pd = convertPressure(rawValues.dynamicPressure, units.pressure);
-        const resultEl = document.getElementById('result');
-        resultEl.textContent = `PT ${formatValue(pt, pressConv.decimals)}  ·  PS ${formatValue(ps, pressConv.decimals)}  ·  Pd ${formatValue(pd, pressConv.decimals)}  ${pressConv.symbol}`;
-        resultEl.className = 'result-display';
-    }
-    
-    // Update flow input placeholder
-    if (rawValues.flowMin !== null && currentModel) {
-        const flowInput = document.getElementById('flowRate');
-        const fMin = convertFlow(rawValues.flowMin, units.flow);
-        const fMax = convertFlow(rawValues.flowMax, units.flow);
-        flowInput.placeholder = `Range: ${formatValue(fMin, flowConv.decimals)}–${formatValue(fMax, flowConv.decimals)}`;
-    }
-    
-    // Update chart with converted data
-    if (chart && currentModel) {
-        // Convert curve data to selected units
-        const totalConverted = currentModel.total.map(p => ({
-            x: convertFlow(p[0], units.flow),
-            y: convertPressure(p[1], units.pressure)
-        }));
-        const staticConverted = currentModel.static.map(p => ({
-            x: convertFlow(p[0], units.flow),
-            y: convertPressure(p[1], units.pressure)
-        }));
-        
-        chart.data.datasets[0].data = totalConverted;
-        chart.data.datasets[1].data = staticConverted;
-        
-        // Update operating point if exists
-        if (rawValues.flowRate !== null && rawValues.totalPressure !== null) {
-            chart.data.datasets[2].data = [{
-                x: convertFlow(rawValues.flowRate, units.flow),
-                y: convertPressure(rawValues.totalPressure, units.pressure)
-            }];
-        }
-        
-        // Update axis labels
-        chart.options.scales.x.title.text = `Portata Q (${flowConv.symbol})`;
-        chart.options.scales.y.title.text = `Pressione P (${pressConv.symbol})`;
-        chart.update();
-    }
-}
-
-/* ─── Init Chart ─── */
-function initChart() {
-    const ctx = document.getElementById('curveChart').getContext('2d');
-    chart = new Chart(ctx, {
-        type: 'scatter',
-        data: {
-            datasets: [
-                {
-                    label: 'Pressione Totale',
-                    borderColor: '#3B82F6',
-                    backgroundColor: 'rgba(59,130,246,0.08)',
-                    showLine: true,
-                    tension: 0.4,
-                    pointRadius: 0,
-                    borderWidth: 2.5,
-                    fill: false,
-                    data: []
-                },
-                {
-                    label: 'Pressione Statica',
-                    borderColor: '#34D399',
-                    backgroundColor: 'rgba(52,211,153,0.06)',
-                    showLine: true,
-                    tension: 0.4,
-                    pointRadius: 0,
-                    borderWidth: 2,
-                    fill: false,
-                    data: []
-                },
-                {
-                    label: 'Punto Operativo',
-                    borderColor: '#F59E0B',
-                    backgroundColor: '#F59E0B',
-                    pointRadius: 10,
-                    pointHoverRadius: 14,
-                    pointStyle: 'circle',
-                    pointBorderWidth: 3,
-                    pointBorderColor: '#FDE68A',
-                    showLine: false,
-                    data: []
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            animation: { duration: 300 },
-            plugins: {
-                legend: { display: false },
-                tooltip: {
-                    backgroundColor: 'rgba(8,13,26,0.95)',
-                    borderColor: 'rgba(255,255,255,0.1)',
-                    borderWidth: 1,
-                    titleColor: '#8A9BBF',
-                    bodyColor: '#F0F4FF',
-                    padding: 12,
-                    cornerRadius: 8,
-                    callbacks: {
-                        label: function(ctx) {
-                            if (ctx.dataset.label === 'Punto Operativo') {
-                                return ` Q: ${ctx.parsed.x.toFixed(0)} m³/h — PT: ${ctx.parsed.y.toFixed(2)} kg/m²`;
-                            }
-                            return ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(2)} kg/m²`;
-                        }
-                    }
-                }
-            },
-            scales: {
-                x: {
-                    type: 'linear',
-                    title: {
-                        display: true,
-                        text: 'Portata Q (m³/h)',
-                        color: '#4A5A7A',
-                        font: { family: "'Fira Code', monospace", size: 11, weight: '500' }
-                    },
-                    grid: { color: 'rgba(255,255,255,0.04)' },
-                    ticks: {
-                        color: '#4A5A7A',
-                        font: { family: "'Fira Code', monospace", size: 11 }
-                    }
-                },
-                y: {
-                    type: 'linear',
-                    title: {
-                        display: true,
-                        text: 'Pressione P (kg/m²)',
-                        color: '#4A5A7A',
-                        font: { family: "'Fira Code', monospace", size: 11, weight: '500' }
-                    },
-                    grid: { color: 'rgba(255,255,255,0.04)' },
-                    ticks: {
-                        color: '#4A5A7A',
-                        font: { family: "'Fira Code', monospace", size: 11 }
-                    }
-                }
-            }
-        }
-    });
-}
-
-/* ─── Load Data ─── */
-async function loadData() {
-    try {
-        const res = await fetch('curves.json');
-        CURVES = await res.json();
-        populateSeries();
-        initChart();
-
-        const totalModels = Object.values(CURVES).reduce((a, s) => a + Object.keys(s).length, 0);
-        document.getElementById('modelCount').textContent = totalModels;
-
-        const chipsEl = document.getElementById('seriesChips');
-        chipsEl.innerHTML = Object.keys(CURVES).sort().map(s => {
-            const count = Object.keys(CURVES[s]).length;
-            return `<span class="chip"><strong>${count}</strong> ${s}</span>`;
-        }).join('');
-
-        // Activate step 1
-        setStepState(1, 'active');
-
-    } catch(e) {
-        console.error('Errore caricamento dati:', e);
-        document.getElementById('series').innerHTML = '<option value="">Errore caricamento dati</option>';
-    }
-}
-
-/* ─── Populate Series ─── */
-function populateSeries() {
-    const sel = document.getElementById('series');
-    sel.innerHTML = '<option value="">Seleziona serie...</option>';
-    Object.keys(CURVES).sort().forEach(s => {
-        const count = Object.keys(CURVES[s]).length;
-        const opt = document.createElement('option');
-        opt.value = s;
-        opt.textContent = `${s} — ${count} modelli`;
-        sel.appendChild(opt);
-    });
-}
-
-/* ─── Step State Management ─── */
-function setStepState(stepNum, state) {
-    const el = document.getElementById(`step${stepNum}`);
-    if (!el) return;
-    el.classList.remove('active', 'completed');
-    if (state) el.classList.add(state);
-    const numEl = el.querySelector('.step-num');
-    if (state === 'completed' && numEl) {
-        numEl.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>`;
-    } else if (numEl) {
-        numEl.textContent = stepNum;
-    }
-}
-
-/* ─── Load Model ─── */
-function loadModel(seriesName, modelName) {
-    if (!CURVES[seriesName]?.[modelName]) return;
-
-    currentModel = CURVES[seriesName][modelName];
-    hasOperatingPoint = false;
-
-    // Hide empty state
-    document.getElementById('chartEmpty').style.display = 'none';
-
-    // Enable flow input
-    const flowInput = document.getElementById('flowRate');
-    flowInput.disabled = false;
-    flowInput.setAttribute('aria-disabled', 'false');
-    flowInput.value = '';
-
-    // Store raw values (base units: m³/h, kg/m²)
-    rawValues.flowMin = currentModel.fMin;
-    rawValues.flowMax = currentModel.fMax;
-    rawValues.pressureMin = currentModel.pMin;
-    rawValues.pressureMax = currentModel.pMax;
-    rawValues.totalPressure = null;
-    rawValues.staticPressure = null;
-    rawValues.dynamicPressure = null;
-    rawValues.flowRate = null;
-
-    // Update displays with current unit selection
-    updateAllDisplays();
-
-    // Reset result
-    const resultEl = document.getElementById('result');
-    resultEl.textContent = 'Inserisci una portata';
-    resultEl.className = 'result-display empty';
-
-    // Header model info
-    document.getElementById('headerModelInfo').innerHTML =
-        `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M20.188 10.934c.326.198.48.4.48.566v1c0 .166-.154.368-.48.566a11.794 11.794 0 0 1-1.064.498 16.148 16.148 0 0 1-.355 2.8c.35.345.7.7 1.05 1.065-.3.3-.601.602-.901.902-.365-.35-.72-.7-1.065-1.05a16.053 16.053 0 0 1-2.8.355 11.794 11.794 0 0 1-.498 1.064c-.198.326-.4.48-.566.48h-1c-.166 0-.368-.154-.566-.48A11.794 11.794 0 0 1 12 18.855a16.148 16.148 0 0 1-2.8-.355c-.345.35-.7.7-1.065 1.05-.3-.3-.601-.602-.902-.902.35-.365.7-.72 1.05-1.065A16.053 16.053 0 0 1 7.928 14.8a11.794 11.794 0 0 1-1.064-.498C6.54 14.1 6.385 13.9 6.385 13.734v-1c0-.166.154-.368.48-.566A11.794 11.794 0 0 1 7.93 11.67a16.148 16.148 0 0 1 .355-2.8C7.935 8.525 7.585 8.17 7.235 7.805c.3-.3.601-.602.901-.902.365.35.72.7 1.065 1.05A16.053 16.053 0 0 1 12 7.598a11.794 11.794 0 0 1 .498-1.064C12.696 6.208 12.9 6.053 13.066 6.053h1c.166 0 .368.154.566.48A11.794 11.794 0 0 1 15.13 7.597a16.148 16.148 0 0 1 2.8.355c.345-.35.7-.7 1.065-1.05.3.3.601.602.902.902-.35.365-.7.72-1.05 1.065.201.907.32 1.846.355 2.8a11.794 11.794 0 0 1 1.064.498l-.079-.233z"/></svg>
-        <strong>${modelName}</strong>`;
-
-    // Step states
-    setStepState(1, 'completed');
-    setStepState(2, 'completed');
-    setStepState(3, 'active');
-    flowInput.focus();
-}
-
-/* ─── Interpolate ─── */
-function interpolate(arr, x) {
-    for (let i = 0; i < arr.length - 1; i++) {
-        const [x1, y1] = arr[i];
-        const [x2, y2] = arr[i+1];
-        if ((x >= x1 && x <= x2) || (x <= x1 && x >= x2)) {
-            const t = (x - x1) / (x2 - x1);
-            return y1 + t * (y2 - y1);
-        }
-    }
-    return null;
-}
-
-/* ─── Event Listeners ─── */
-document.getElementById('series').addEventListener('change', function() {
-    const ms = document.getElementById('model');
-    ms.innerHTML = '<option value="">Seleziona modello...</option>';
-
-    const flowInput = document.getElementById('flowRate');
-    flowInput.disabled = true;
-    flowInput.setAttribute('aria-disabled', 'true');
-    flowInput.value = '';
-
-    document.getElementById('result').textContent = 'Inserisci una portata';
-    document.getElementById('result').className = 'result-display empty';
-
-    // Reset cards
-    ['totalPressure','staticPressure','dynamicPressure','flowRange','pressureRange'].forEach(id => {
-        document.getElementById(id).textContent = '—';
-    });
-
-    if (this.value && CURVES[this.value]) {
-        ms.disabled = false;
-        ms.setAttribute('aria-disabled', 'false');
-        Object.keys(CURVES[this.value]).sort().forEach(m => {
-            const o = document.createElement('option');
-            o.value = m; o.textContent = m;
-            ms.appendChild(o);
-        });
-        setStepState(1, 'completed');
-        setStepState(2, 'active');
-        setStepState(3, '');
-        ms.focus();
-    } else {
-        ms.disabled = true;
-        ms.setAttribute('aria-disabled', 'true');
-        setStepState(1, 'active');
-        setStepState(2, '');
-        setStepState(3, '');
-        document.getElementById('headerModelInfo').innerHTML = '';
-        // Show empty chart
-        document.getElementById('chartEmpty').style.display = '';
-        if (chart) {
-            chart.data.datasets.forEach(d => d.data = []);
-            chart.update();
-        }
-    }
-});
-
-document.getElementById('model').addEventListener('change', function() {
-    const series = document.getElementById('series').value;
-    if (this.value && series) loadModel(series, this.value);
-});
-
-// Convert from display unit to base unit (m³/h)
-function flowToBase(value, fromUnit) {
-    const conv = flowConversions[fromUnit];
-    return value / conv.factor;
-}
-
-document.getElementById('flowRate').addEventListener('input', function() {
-    const inputValue = parseFloat(this.value);
-    const resultEl = document.getElementById('result');
-    const units = getCurrentUnits();
-
-    if (!inputValue || !currentModel) {
-        rawValues.totalPressure = null;
-        rawValues.staticPressure = null;
-        rawValues.dynamicPressure = null;
-        rawValues.flowRate = null;
-        resultEl.textContent = 'Inserisci una portata';
-        resultEl.className = 'result-display empty';
-        return;
-    }
-
-    // Convert input to base unit (m³/h)
-    const qBase = flowToBase(inputValue, units.flow);
-    
-    const pt = interpolate(currentModel.total, qBase);
-    const ps = interpolate(currentModel.static, qBase);
-
-    if (pt !== null && ps !== null) {
-        const pd = pt - ps;
-        
-        // Store raw values in base units
-        rawValues.totalPressure = pt;
-        rawValues.staticPressure = ps;
-        rawValues.dynamicPressure = pd;
-        rawValues.flowRate = qBase;
-        
-        // Update displays
-        updateAllDisplays();
-
-        chart.data.datasets[2].data = [{x: qBase, y: pt}];
-        chart.update('none');
-        hasOperatingPoint = true;
-    } else {
-        rawValues.totalPressure = null;
-        rawValues.staticPressure = null;
-        rawValues.dynamicPressure = null;
-        
-        document.getElementById('totalPressure').textContent = '—';
-        document.getElementById('staticPressure').textContent = '—';
-        document.getElementById('dynamicPressure').textContent = '—';
-        
-        const flowConv = flowConversions[units.flow];
-        const fMin = convertFlow(currentModel.fMin, units.flow);
-        const fMax = convertFlow(currentModel.fMax, units.flow);
-        resultEl.textContent = `⚠ Portata fuori range (${formatValue(fMin, flowConv.decimals)}–${formatValue(fMax, flowConv.decimals)} ${flowConv.symbol})`;
-        resultEl.className = 'result-display out-range';
-        resultEl.setAttribute('role', 'alert');
-
-        chart.data.datasets[2].data = [];
-        chart.update('none');
-    }
-});
-
-// Unit change listeners
-document.getElementById('flowUnit').addEventListener('change', function() {
-    updateAllDisplays();
-    // Clear input when unit changes to avoid confusion
-    const flowInput = document.getElementById('flowRate');
-    if (flowInput.value && rawValues.flowRate !== null) {
-        // Convert the current raw value to new unit for display
-        const units = getCurrentUnits();
-        const conv = flowConversions[units.flow];
-        flowInput.value = formatValue(convertFlow(rawValues.flowRate, units.flow), conv.decimals);
-    }
-});
-
-document.getElementById('pressureUnit').addEventListener('change', function() {
-    updateAllDisplays();
-});
-
-/* ─── Chart Drag Interaction ─── */
-let isDragging = false;
-let lastDragTime = 0;
-const DRAG_THROTTLE_MS = 16; // ~60fps
-
-function getChartCoords(event) {
-    const rect = chart.canvas.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-    
-    const xScale = chart.scales.x;
-    const yScale = chart.scales.y;
-    
-    return {
-        dataX: xScale.getValueForPixel(x),
-        dataY: yScale.getValueForPixel(y),
-        pixelX: x,
-        pixelY: y
-    };
-}
-
-function findNearestPointOnCurve(targetX) {
-    if (!currentModel || !currentModel.total.length) return null;
-    
-    // Clamp to curve range
-    const points = currentModel.total;
-    const minX = Math.min(points[0][0], points[points.length-1][0]);
-    const maxX = Math.max(points[0][0], points[points.length-1][0]);
-    
-    const clampedX = Math.max(minX, Math.min(maxX, targetX));
-    return clampedX;
-}
-
-function updateOperatingPoint(flowRateBase, fast = false) {
-    // flowRateBase is in m³/h (base unit)
-    // fast = true for drag (skip full updateAllDisplays)
-    if (!currentModel) return;
-    
-    const pt = interpolate(currentModel.total, flowRateBase);
-    const ps = interpolate(currentModel.static, flowRateBase);
-    
-    if (pt !== null && ps !== null) {
-        const pd = pt - ps;
-        
-        // Store raw values
-        rawValues.totalPressure = pt;
-        rawValues.staticPressure = ps;
-        rawValues.dynamicPressure = pd;
-        rawValues.flowRate = flowRateBase;
-        
-        const units = getCurrentUnits();
-        const flowConv = flowConversions[units.flow];
-        const pressConv = pressureConversions[units.pressure];
-        
-        // Update input
-        const displayFlow = convertFlow(flowRateBase, units.flow);
-        document.getElementById('flowRate').value = formatValue(displayFlow, flowConv.decimals);
-        
-        // Fast path: update only values and point (no curve recalc)
-        if (fast) {
-            // Update numeric displays
-            const ptConv = convertPressure(pt, units.pressure);
-            const psConv = convertPressure(ps, units.pressure);
-            const pdConv = convertPressure(pd, units.pressure);
-            
-            document.getElementById('totalPressure').textContent = formatValue(ptConv, pressConv.decimals);
-            document.getElementById('staticPressure').textContent = formatValue(psConv, pressConv.decimals);
-            document.getElementById('dynamicPressure').textContent = formatValue(pdConv, pressConv.decimals);
-            
-            const resultEl = document.getElementById('result');
-            resultEl.textContent = `PT ${formatValue(ptConv, pressConv.decimals)}  ·  PS ${formatValue(psConv, pressConv.decimals)}  ·  Pd ${formatValue(pdConv, pressConv.decimals)}  ${pressConv.symbol}`;
-            resultEl.className = 'result-display';
-            
-            // Update only operating point in chart
-            const xConv = convertFlow(flowRateBase, units.flow);
-            const yConv = convertPressure(pt, units.pressure);
-            chart.data.datasets[2].data = [{x: xConv, y: yConv}];
-            chart.update('none');
-        } else {
-            // Full update
-            updateAllDisplays();
-        }
-        
-        hasOperatingPoint = true;
-    }
-}
-
-// Canvas event listeners
-document.getElementById('curveChart').addEventListener('mousedown', function(e) {
-    if (!currentModel) return;
-    
-    // Convert from display units to base units
-    const units = getCurrentUnits();
-    const coords = getChartCoords(e);
-    const flowInBase = coords.dataX / flowConversions[units.flow].factor;
-    const flowRate = findNearestPointOnCurve(flowInBase);
-    
-    if (flowRate !== null) {
-        isDragging = true;
-        updateOperatingPoint(flowRate, true); // fast mode
-        this.style.cursor = 'grabbing';
-    }
-});
-
-document.getElementById('curveChart').addEventListener('mousemove', function(e) {
-    if (!currentModel) {
-        this.style.cursor = 'default';
-        return;
-    }
-    
-    const coords = getChartCoords(e);
-    const xScale = chart.scales.x;
-    const yScale = chart.scales.y;
-    
-    const inBounds = coords.pixelX >= xScale.left && coords.pixelX <= xScale.right &&
-                     coords.pixelY >= yScale.top && coords.pixelY <= yScale.bottom;
-    
-    if (isDragging) {
-        // Throttle updates for performance
-        const now = performance.now();
-        if (now - lastDragTime < DRAG_THROTTLE_MS) return;
-        lastDragTime = now;
-        
-        // Convert from display units to base units
-        const units = getCurrentUnits();
-        const flowInBase = coords.dataX / flowConversions[units.flow].factor;
-        const flowRate = findNearestPointOnCurve(flowInBase);
-        if (flowRate !== null) {
-            updateOperatingPoint(flowRate, true); // fast mode
-        }
-        this.style.cursor = 'grabbing';
-    } else {
-        this.style.cursor = inBounds ? 'grab' : 'default';
-    }
-});
-
-document.addEventListener('mouseup', function() {
-    if (isDragging) {
-        isDragging = false;
-        document.getElementById('curveChart').style.cursor = 'grab';
-    }
-});
-
-// Touch support for mobile
-document.getElementById('curveChart').addEventListener('touchstart', function(e) {
-    if (!currentModel || e.touches.length !== 1) return;
-    e.preventDefault();
-    
-    const touch = e.touches[0];
-    const units = getCurrentUnits();
-    const coords = getChartCoords(touch);
-    const flowInBase = coords.dataX / flowConversions[units.flow].factor;
-    const flowRate = findNearestPointOnCurve(flowInBase);
-    
-    if (flowRate !== null) {
-        isDragging = true;
-        updateOperatingPoint(flowRate, true);
-    }
-}, { passive: false });
-
-document.getElementById('curveChart').addEventListener('touchmove', function(e) {
-    if (!isDragging || e.touches.length !== 1) return;
-    e.preventDefault();
-    
-    // Throttle updates for performance
-    const now = performance.now();
-    if (now - lastDragTime < DRAG_THROTTLE_MS) return;
-    lastDragTime = now;
-    
-    const touch = e.touches[0];
-    const units = getCurrentUnits();
-    const coords = getChartCoords(touch);
-    const flowInBase = coords.dataX / flowConversions[units.flow].factor;
-    const flowRate = findNearestPointOnCurve(flowInBase);
-    
-    if (flowRate !== null) {
-        updateOperatingPoint(flowRate, true);
-    }
-}, { passive: false });
-
-document.getElementById('curveChart').addEventListener('touchend', function() {
-    isDragging = false;
-});
-
-/* ─── Bootstrap ─── */
-loadData();
-</script>
+    <div class="stats">
+        <span><strong>763</strong> modelli</span>
+        <span><strong>28</strong> serie</span>
+        <span><strong>&lt;0.1%</strong> errore dati</span>
+    </div>
 </body>
 </html>
