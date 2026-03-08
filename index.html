@@ -1113,6 +1113,8 @@ document.getElementById('pressureUnit').addEventListener('change', function() {
 
 /* ─── Chart Drag Interaction ─── */
 let isDragging = false;
+let lastDragTime = 0;
+const DRAG_THROTTLE_MS = 16; // ~60fps
 
 function getChartCoords(event) {
     const rect = chart.canvas.getBoundingClientRect();
@@ -1142,8 +1144,9 @@ function findNearestPointOnCurve(targetX) {
     return clampedX;
 }
 
-function updateOperatingPoint(flowRateBase) {
+function updateOperatingPoint(flowRateBase, fast = false) {
     // flowRateBase is in m³/h (base unit)
+    // fast = true for drag (skip full updateAllDisplays)
     if (!currentModel) return;
     
     const pt = interpolate(currentModel.total, flowRateBase);
@@ -1158,18 +1161,39 @@ function updateOperatingPoint(flowRateBase) {
         rawValues.dynamicPressure = pd;
         rawValues.flowRate = flowRateBase;
         
-        // Update input with converted value
         const units = getCurrentUnits();
         const flowConv = flowConversions[units.flow];
+        const pressConv = pressureConversions[units.pressure];
+        
+        // Update input
         const displayFlow = convertFlow(flowRateBase, units.flow);
         document.getElementById('flowRate').value = formatValue(displayFlow, flowConv.decimals);
         
-        // Update all displays
-        updateAllDisplays();
+        // Fast path: update only values and point (no curve recalc)
+        if (fast) {
+            // Update numeric displays
+            const ptConv = convertPressure(pt, units.pressure);
+            const psConv = convertPressure(ps, units.pressure);
+            const pdConv = convertPressure(pd, units.pressure);
+            
+            document.getElementById('totalPressure').textContent = formatValue(ptConv, pressConv.decimals);
+            document.getElementById('staticPressure').textContent = formatValue(psConv, pressConv.decimals);
+            document.getElementById('dynamicPressure').textContent = formatValue(pdConv, pressConv.decimals);
+            
+            const resultEl = document.getElementById('result');
+            resultEl.textContent = `PT ${formatValue(ptConv, pressConv.decimals)}  ·  PS ${formatValue(psConv, pressConv.decimals)}  ·  Pd ${formatValue(pdConv, pressConv.decimals)}  ${pressConv.symbol}`;
+            resultEl.className = 'result-display';
+            
+            // Update only operating point in chart
+            const xConv = convertFlow(flowRateBase, units.flow);
+            const yConv = convertPressure(pt, units.pressure);
+            chart.data.datasets[2].data = [{x: xConv, y: yConv}];
+            chart.update('none');
+        } else {
+            // Full update
+            updateAllDisplays();
+        }
         
-        // Update chart point
-        chart.data.datasets[2].data = [{x: flowRateBase, y: pt}];
-        chart.update('none');
         hasOperatingPoint = true;
     }
 }
@@ -1178,12 +1202,15 @@ function updateOperatingPoint(flowRateBase) {
 document.getElementById('curveChart').addEventListener('mousedown', function(e) {
     if (!currentModel) return;
     
+    // Convert from display units to base units
+    const units = getCurrentUnits();
     const coords = getChartCoords(e);
-    const flowRate = findNearestPointOnCurve(coords.dataX);
+    const flowInBase = coords.dataX / flowConversions[units.flow].factor;
+    const flowRate = findNearestPointOnCurve(flowInBase);
     
     if (flowRate !== null) {
         isDragging = true;
-        updateOperatingPoint(flowRate);
+        updateOperatingPoint(flowRate, true); // fast mode
         this.style.cursor = 'grabbing';
     }
 });
@@ -1194,7 +1221,6 @@ document.getElementById('curveChart').addEventListener('mousemove', function(e) 
         return;
     }
     
-    // Show grab cursor when hovering over chart area
     const coords = getChartCoords(e);
     const xScale = chart.scales.x;
     const yScale = chart.scales.y;
@@ -1203,9 +1229,17 @@ document.getElementById('curveChart').addEventListener('mousemove', function(e) 
                      coords.pixelY >= yScale.top && coords.pixelY <= yScale.bottom;
     
     if (isDragging) {
-        const flowRate = findNearestPointOnCurve(coords.dataX);
+        // Throttle updates for performance
+        const now = performance.now();
+        if (now - lastDragTime < DRAG_THROTTLE_MS) return;
+        lastDragTime = now;
+        
+        // Convert from display units to base units
+        const units = getCurrentUnits();
+        const flowInBase = coords.dataX / flowConversions[units.flow].factor;
+        const flowRate = findNearestPointOnCurve(flowInBase);
         if (flowRate !== null) {
-            updateOperatingPoint(flowRate);
+            updateOperatingPoint(flowRate, true); // fast mode
         }
         this.style.cursor = 'grabbing';
     } else {
@@ -1226,12 +1260,14 @@ document.getElementById('curveChart').addEventListener('touchstart', function(e)
     e.preventDefault();
     
     const touch = e.touches[0];
+    const units = getCurrentUnits();
     const coords = getChartCoords(touch);
-    const flowRate = findNearestPointOnCurve(coords.dataX);
+    const flowInBase = coords.dataX / flowConversions[units.flow].factor;
+    const flowRate = findNearestPointOnCurve(flowInBase);
     
     if (flowRate !== null) {
         isDragging = true;
-        updateOperatingPoint(flowRate);
+        updateOperatingPoint(flowRate, true);
     }
 }, { passive: false });
 
@@ -1239,12 +1275,19 @@ document.getElementById('curveChart').addEventListener('touchmove', function(e) 
     if (!isDragging || e.touches.length !== 1) return;
     e.preventDefault();
     
+    // Throttle updates for performance
+    const now = performance.now();
+    if (now - lastDragTime < DRAG_THROTTLE_MS) return;
+    lastDragTime = now;
+    
     const touch = e.touches[0];
+    const units = getCurrentUnits();
     const coords = getChartCoords(touch);
-    const flowRate = findNearestPointOnCurve(coords.dataX);
+    const flowInBase = coords.dataX / flowConversions[units.flow].factor;
+    const flowRate = findNearestPointOnCurve(flowInBase);
     
     if (flowRate !== null) {
-        updateOperatingPoint(flowRate);
+        updateOperatingPoint(flowRate, true);
     }
 }, { passive: false });
 
