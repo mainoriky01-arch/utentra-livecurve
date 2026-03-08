@@ -320,6 +320,50 @@
         .data-card.amber .card-value { color: var(--amber-400); }
         .data-card.amber { background: rgba(245,158,11,0.05); border-color: rgba(245,158,11,0.2); }
 
+        /* ─── Unit Selectors ─── */
+        .unit-selectors {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .unit-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 8px 14px;
+        }
+        .unit-group label {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+        .unit-group select {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+            padding: 6px 28px 6px 10px;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238A9BBF' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            transition: border-color var(--transition);
+        }
+        .unit-group select:hover,
+        .unit-group select:focus {
+            border-color: var(--blue-500);
+        }
+
         /* ─── Info Footer ─── */
         .info-footer {
             background: var(--bg-card);
@@ -492,6 +536,27 @@
             </div>
         </section>
 
+        <!-- ─── Unit Selectors ─── -->
+        <div class="unit-selectors">
+            <div class="unit-group">
+                <label for="flowUnit">Unità Portata</label>
+                <select id="flowUnit" aria-label="Seleziona unità di misura portata">
+                    <option value="m3h" selected>m³/h</option>
+                    <option value="m3min">m³/min</option>
+                    <option value="m3s">m³/s</option>
+                    <option value="cfm">cfm</option>
+                </select>
+            </div>
+            <div class="unit-group">
+                <label for="pressureUnit">Unità Pressione</label>
+                <select id="pressureUnit" aria-label="Seleziona unità di misura pressione">
+                    <option value="kgm2" selected>kg/m²</option>
+                    <option value="pa">Pa</option>
+                    <option value="inwg">in wg</option>
+                </select>
+            </div>
+        </div>
+
         <!-- ─── Data Cards ─── -->
         <div class="data-grid" role="region" aria-label="Dati tecnici ventilatore">
 
@@ -501,7 +566,7 @@
                     Pressione Totale
                 </div>
                 <div class="card-value" id="totalPressure">—</div>
-                <div class="card-unit">kg/m²</div>
+                <div class="card-unit pressure-unit">kg/m²</div>
             </div>
 
             <div class="data-card" aria-label="Pressione Statica">
@@ -510,7 +575,7 @@
                     Pressione Statica
                 </div>
                 <div class="card-value" id="staticPressure">—</div>
-                <div class="card-unit">kg/m²</div>
+                <div class="card-unit pressure-unit">kg/m²</div>
             </div>
 
             <div class="data-card amber" aria-label="Pressione Dinamica">
@@ -519,7 +584,7 @@
                     Pressione Dinamica
                 </div>
                 <div class="card-value" id="dynamicPressure">—</div>
-                <div class="card-unit">kg/m²</div>
+                <div class="card-unit pressure-unit">kg/m²</div>
             </div>
 
             <div class="data-card" aria-label="Range Portata">
@@ -528,7 +593,7 @@
                     Range Portata
                 </div>
                 <div class="card-value" id="flowRange" style="font-size:16px;line-height:1.4;">—</div>
-                <div class="card-unit">m³/h</div>
+                <div class="card-unit flow-unit">m³/h</div>
             </div>
 
             <div class="data-card" aria-label="Range Pressione">
@@ -537,7 +602,7 @@
                     Range Pressione
                 </div>
                 <div class="card-value" id="pressureRange" style="font-size:16px;line-height:1.4;">—</div>
-                <div class="card-unit">kg/m²</div>
+                <div class="card-unit pressure-unit">kg/m²</div>
             </div>
         </div>
 
@@ -572,6 +637,113 @@ let CURVES = {};
 let chart = null;
 let currentModel = null;
 let hasOperatingPoint = false;
+
+// Store raw values in base units (m³/h, kg/m²)
+let rawValues = {
+    totalPressure: null,
+    staticPressure: null,
+    dynamicPressure: null,
+    flowRate: null,
+    flowMin: null,
+    flowMax: null,
+    pressureMin: null,
+    pressureMax: null
+};
+
+/* ─── Unit Conversion ─── */
+const flowConversions = {
+    m3h:   { factor: 1,        symbol: 'm³/h',   decimals: 0 },
+    m3min: { factor: 1/60,     symbol: 'm³/min', decimals: 2 },
+    m3s:   { factor: 1/3600,   symbol: 'm³/s',   decimals: 4 },
+    cfm:   { factor: 0.58858,  symbol: 'cfm',    decimals: 0 }
+};
+
+const pressureConversions = {
+    kgm2: { factor: 1,        symbol: 'kg/m²', decimals: 2 },
+    pa:   { factor: 9.80665,  symbol: 'Pa',    decimals: 0 },
+    inwg: { factor: 0.03937,  symbol: 'in wg', decimals: 3 }
+};
+
+function convertFlow(valueM3h, toUnit) {
+    if (valueM3h === null || valueM3h === undefined) return null;
+    const conv = flowConversions[toUnit];
+    return valueM3h * conv.factor;
+}
+
+function convertPressure(valueKgm2, toUnit) {
+    if (valueKgm2 === null || valueKgm2 === undefined) return null;
+    const conv = pressureConversions[toUnit];
+    return valueKgm2 * conv.factor;
+}
+
+function formatValue(value, decimals) {
+    if (value === null || value === undefined) return '—';
+    return value.toFixed(decimals);
+}
+
+function getCurrentUnits() {
+    return {
+        flow: document.getElementById('flowUnit').value,
+        pressure: document.getElementById('pressureUnit').value
+    };
+}
+
+function updateAllDisplays() {
+    const units = getCurrentUnits();
+    const flowConv = flowConversions[units.flow];
+    const pressConv = pressureConversions[units.pressure];
+    
+    // Update pressure values
+    document.getElementById('totalPressure').textContent = 
+        formatValue(convertPressure(rawValues.totalPressure, units.pressure), pressConv.decimals);
+    document.getElementById('staticPressure').textContent = 
+        formatValue(convertPressure(rawValues.staticPressure, units.pressure), pressConv.decimals);
+    document.getElementById('dynamicPressure').textContent = 
+        formatValue(convertPressure(rawValues.dynamicPressure, units.pressure), pressConv.decimals);
+    
+    // Update ranges
+    if (rawValues.flowMin !== null && rawValues.flowMax !== null) {
+        const fMin = convertFlow(rawValues.flowMin, units.flow);
+        const fMax = convertFlow(rawValues.flowMax, units.flow);
+        document.getElementById('flowRange').textContent = 
+            `${formatValue(fMin, flowConv.decimals)}–${formatValue(fMax, flowConv.decimals)}`;
+    }
+    if (rawValues.pressureMin !== null && rawValues.pressureMax !== null) {
+        const pMin = convertPressure(rawValues.pressureMin, units.pressure);
+        const pMax = convertPressure(rawValues.pressureMax, units.pressure);
+        document.getElementById('pressureRange').textContent = 
+            `${formatValue(pMin, pressConv.decimals)}–${formatValue(pMax, pressConv.decimals)}`;
+    }
+    
+    // Update unit labels
+    document.querySelectorAll('.pressure-unit').forEach(el => el.textContent = pressConv.symbol);
+    document.querySelectorAll('.flow-unit').forEach(el => el.textContent = flowConv.symbol);
+    
+    // Update result display
+    if (rawValues.totalPressure !== null) {
+        const pt = convertPressure(rawValues.totalPressure, units.pressure);
+        const ps = convertPressure(rawValues.staticPressure, units.pressure);
+        const pd = convertPressure(rawValues.dynamicPressure, units.pressure);
+        const resultEl = document.getElementById('result');
+        resultEl.textContent = `PT ${formatValue(pt, pressConv.decimals)}  ·  PS ${formatValue(ps, pressConv.decimals)}  ·  Pd ${formatValue(pd, pressConv.decimals)}  ${pressConv.symbol}`;
+        resultEl.className = 'result-display';
+    }
+    
+    // Update flow input placeholder
+    if (rawValues.flowMin !== null && currentModel) {
+        const flowInput = document.getElementById('flowRate');
+        const fMin = convertFlow(rawValues.flowMin, units.flow);
+        const fMax = convertFlow(rawValues.flowMax, units.flow);
+        flowInput.placeholder = `Range: ${formatValue(fMin, flowConv.decimals)}–${formatValue(fMax, flowConv.decimals)}`;
+    }
+    
+    // Update chart axis labels
+    if (chart) {
+        chart.options.scales.x.title.text = `Portata Q (${flowConv.symbol})`;
+        chart.options.scales.y.title.text = `Pressione P (${pressConv.symbol})`;
+        chart.update('none');
+    }
+}
 
 /* ─── Init Chart ─── */
 function initChart() {
@@ -749,17 +921,20 @@ function loadModel(seriesName, modelName) {
     const flowInput = document.getElementById('flowRate');
     flowInput.disabled = false;
     flowInput.setAttribute('aria-disabled', 'false');
-    flowInput.placeholder = `Range: ${currentModel.fMin}–${currentModel.fMax}`;
     flowInput.value = '';
 
-    // Update range cards
-    document.getElementById('flowRange').textContent  = `${currentModel.fMin}–${currentModel.fMax}`;
-    document.getElementById('pressureRange').textContent = `${currentModel.pMin}–${currentModel.pMax}`;
+    // Store raw values (base units: m³/h, kg/m²)
+    rawValues.flowMin = currentModel.fMin;
+    rawValues.flowMax = currentModel.fMax;
+    rawValues.pressureMin = currentModel.pMin;
+    rawValues.pressureMax = currentModel.pMax;
+    rawValues.totalPressure = null;
+    rawValues.staticPressure = null;
+    rawValues.dynamicPressure = null;
+    rawValues.flowRate = null;
 
-    // Reset computed cards
-    document.getElementById('totalPressure').textContent   = '—';
-    document.getElementById('staticPressure').textContent  = '—';
-    document.getElementById('dynamicPressure').textContent = '—';
+    // Update displays with current unit selection
+    updateAllDisplays();
 
     // Reset result
     const resultEl = document.getElementById('result');
@@ -842,42 +1017,84 @@ document.getElementById('model').addEventListener('change', function() {
     if (this.value && series) loadModel(series, this.value);
 });
 
-document.getElementById('flowRate').addEventListener('input', function() {
-    const q = parseFloat(this.value);
-    const resultEl = document.getElementById('result');
+// Convert from display unit to base unit (m³/h)
+function flowToBase(value, fromUnit) {
+    const conv = flowConversions[fromUnit];
+    return value / conv.factor;
+}
 
-    if (!q || !currentModel) {
+document.getElementById('flowRate').addEventListener('input', function() {
+    const inputValue = parseFloat(this.value);
+    const resultEl = document.getElementById('result');
+    const units = getCurrentUnits();
+
+    if (!inputValue || !currentModel) {
+        rawValues.totalPressure = null;
+        rawValues.staticPressure = null;
+        rawValues.dynamicPressure = null;
+        rawValues.flowRate = null;
         resultEl.textContent = 'Inserisci una portata';
         resultEl.className = 'result-display empty';
         return;
     }
 
-    const pt = interpolate(currentModel.total, q);
-    const ps = interpolate(currentModel.static, q);
+    // Convert input to base unit (m³/h)
+    const qBase = flowToBase(inputValue, units.flow);
+    
+    const pt = interpolate(currentModel.total, qBase);
+    const ps = interpolate(currentModel.static, qBase);
 
     if (pt !== null && ps !== null) {
         const pd = pt - ps;
-        document.getElementById('totalPressure').textContent   = pt.toFixed(2);
-        document.getElementById('staticPressure').textContent  = ps.toFixed(2);
-        document.getElementById('dynamicPressure').textContent = pd.toFixed(2);
+        
+        // Store raw values in base units
+        rawValues.totalPressure = pt;
+        rawValues.staticPressure = ps;
+        rawValues.dynamicPressure = pd;
+        rawValues.flowRate = qBase;
+        
+        // Update displays
+        updateAllDisplays();
 
-        resultEl.textContent = `PT ${pt.toFixed(2)}  ·  PS ${ps.toFixed(2)}  ·  Pd ${pd.toFixed(2)}  kg/m²`;
-        resultEl.className = 'result-display';
-
-        chart.data.datasets[2].data = [{x: q, y: pt}];
+        chart.data.datasets[2].data = [{x: qBase, y: pt}];
         chart.update('none');
         hasOperatingPoint = true;
     } else {
-        document.getElementById('totalPressure').textContent   = '—';
-        document.getElementById('staticPressure').textContent  = '—';
+        rawValues.totalPressure = null;
+        rawValues.staticPressure = null;
+        rawValues.dynamicPressure = null;
+        
+        document.getElementById('totalPressure').textContent = '—';
+        document.getElementById('staticPressure').textContent = '—';
         document.getElementById('dynamicPressure').textContent = '—';
-        resultEl.textContent = `⚠ Portata fuori range (${currentModel.fMin}–${currentModel.fMax} m³/h)`;
+        
+        const flowConv = flowConversions[units.flow];
+        const fMin = convertFlow(currentModel.fMin, units.flow);
+        const fMax = convertFlow(currentModel.fMax, units.flow);
+        resultEl.textContent = `⚠ Portata fuori range (${formatValue(fMin, flowConv.decimals)}–${formatValue(fMax, flowConv.decimals)} ${flowConv.symbol})`;
         resultEl.className = 'result-display out-range';
         resultEl.setAttribute('role', 'alert');
 
         chart.data.datasets[2].data = [];
         chart.update('none');
     }
+});
+
+// Unit change listeners
+document.getElementById('flowUnit').addEventListener('change', function() {
+    updateAllDisplays();
+    // Clear input when unit changes to avoid confusion
+    const flowInput = document.getElementById('flowRate');
+    if (flowInput.value && rawValues.flowRate !== null) {
+        // Convert the current raw value to new unit for display
+        const units = getCurrentUnits();
+        const conv = flowConversions[units.flow];
+        flowInput.value = formatValue(convertFlow(rawValues.flowRate, units.flow), conv.decimals);
+    }
+});
+
+document.getElementById('pressureUnit').addEventListener('change', function() {
+    updateAllDisplays();
 });
 
 /* ─── Chart Drag Interaction ─── */
@@ -911,30 +1128,33 @@ function findNearestPointOnCurve(targetX) {
     return clampedX;
 }
 
-function updateOperatingPoint(flowRate) {
+function updateOperatingPoint(flowRateBase) {
+    // flowRateBase is in m³/h (base unit)
     if (!currentModel) return;
     
-    const pt = interpolate(currentModel.total, flowRate);
-    const ps = interpolate(currentModel.static, flowRate);
+    const pt = interpolate(currentModel.total, flowRateBase);
+    const ps = interpolate(currentModel.static, flowRateBase);
     
     if (pt !== null && ps !== null) {
         const pd = pt - ps;
         
-        // Update input
-        document.getElementById('flowRate').value = Math.round(flowRate);
+        // Store raw values
+        rawValues.totalPressure = pt;
+        rawValues.staticPressure = ps;
+        rawValues.dynamicPressure = pd;
+        rawValues.flowRate = flowRateBase;
         
-        // Update cards
-        document.getElementById('totalPressure').textContent = pt.toFixed(2);
-        document.getElementById('staticPressure').textContent = ps.toFixed(2);
-        document.getElementById('dynamicPressure').textContent = pd.toFixed(2);
+        // Update input with converted value
+        const units = getCurrentUnits();
+        const flowConv = flowConversions[units.flow];
+        const displayFlow = convertFlow(flowRateBase, units.flow);
+        document.getElementById('flowRate').value = formatValue(displayFlow, flowConv.decimals);
         
-        // Update result
-        const resultEl = document.getElementById('result');
-        resultEl.textContent = `PT ${pt.toFixed(2)}  ·  PS ${ps.toFixed(2)}  ·  Pd ${pd.toFixed(2)}  kg/m²`;
-        resultEl.className = 'result-display';
+        // Update all displays
+        updateAllDisplays();
         
         // Update chart point
-        chart.data.datasets[2].data = [{x: flowRate, y: pt}];
+        chart.data.datasets[2].data = [{x: flowRateBase, y: pt}];
         chart.update('none');
         hasOperatingPoint = true;
     }
