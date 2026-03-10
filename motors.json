@@ -1,0 +1,7849 @@
+{
+  "EVP 315/A": {
+    "id": 102,
+    "motorSize": "63 B",
+    "poles": 4,
+    "power": 0.18,
+    "frequency": 50
+  },
+  "EVP 315/B": {
+    "id": 103,
+    "motorSize": "71 B",
+    "poles": 2,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "EVP 315/C - 60 Hz": {
+    "id": 104,
+    "motorSize": "80 B",
+    "poles": 2,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVP 315/D - 60 Hz": {
+    "id": 105,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "EVP 355/A": {
+    "id": 106,
+    "motorSize": "63 B",
+    "poles": 4,
+    "power": 0.18,
+    "frequency": 50
+  },
+  "EVP 355/B": {
+    "id": 107,
+    "motorSize": "80 A",
+    "poles": 2,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "EVP 355/C - 60 Hz": {
+    "id": 108,
+    "motorSize": "90 S",
+    "poles": 2,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "EVP 355/D - 60 Hz": {
+    "id": 109,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "EVP 400/A": {
+    "id": 110,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "EVP 400/B": {
+    "id": 111,
+    "motorSize": "80 B",
+    "poles": 2,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVP 400/C - 60 Hz": {
+    "id": 112,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVP 400/D - 60 Hz": {
+    "id": 113,
+    "motorSize": "71 B",
+    "poles": 4,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "EVP 450/A": {
+    "id": 114,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "EVP 450/D - 60 Hz": {
+    "id": 115,
+    "motorSize": "80 A",
+    "poles": 4,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "EVP 500/A": {
+    "id": 116,
+    "motorSize": "80 A",
+    "poles": 4,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "EVP 500/D - 60 Hz": {
+    "id": 117,
+    "motorSize": "90 S",
+    "poles": 4,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVF 315/A": {
+    "id": 118,
+    "motorSize": "63 B",
+    "poles": 4,
+    "power": 0.18,
+    "frequency": 50
+  },
+  "EVF 315/B": {
+    "id": 119,
+    "motorSize": "71 B",
+    "poles": 2,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "EVF 315/C - 60 Hz": {
+    "id": 120,
+    "motorSize": "80 B",
+    "poles": 2,
+    "power": 1.1,
+    "frequency": 60
+  },
+  "EVF 315/D - 60 Hz": {
+    "id": 121,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 60
+  },
+  "EVF 355/A": {
+    "id": 122,
+    "motorSize": "63 B",
+    "poles": 4,
+    "power": 0.18,
+    "frequency": 50
+  },
+  "EVF 355/B": {
+    "id": 123,
+    "motorSize": "80 A",
+    "poles": 2,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "EVF 355/C - 60 Hz": {
+    "id": 124,
+    "motorSize": "90 S",
+    "poles": 2,
+    "power": 1.5,
+    "frequency": 60
+  },
+  "EVF 355/D - 60 Hz": {
+    "id": 125,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "EVF 400/A": {
+    "id": 126,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "EVF 400/B": {
+    "id": 127,
+    "motorSize": "80 B",
+    "poles": 2,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVF 400/C - 60 Hz": {
+    "id": 128,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVF 400/D - 60 Hz": {
+    "id": 129,
+    "motorSize": "71 B",
+    "poles": 4,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "EVF 450/A": {
+    "id": 130,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "EVF 450/B": {
+    "id": 131,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVF 450/D - 60 Hz": {
+    "id": 132,
+    "motorSize": "80 A",
+    "poles": 4,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "EVF 500/A": {
+    "id": 133,
+    "motorSize": "80 A",
+    "poles": 4,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "EVF 500/B": {
+    "id": 134,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "EVF 500/D - 60 Hz": {
+    "id": 135,
+    "motorSize": "90 S",
+    "poles": 4,
+    "power": 1.1,
+    "frequency": 60
+  },
+  "EVF 560/A": {
+    "id": 136,
+    "motorSize": "80 B",
+    "poles": 4,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "EVF 560/B": {
+    "id": 137,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVF 560/D - 60 Hz": {
+    "id": 138,
+    "motorSize": "90 L",
+    "poles": 4,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "EVF 630/A": {
+    "id": 139,
+    "motorSize": "80 A",
+    "poles": 6,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "EVF 630/B": {
+    "id": 140,
+    "motorSize": "90 S",
+    "poles": 4,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVF 630/C*": {
+    "id": 141,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "EVF 630/D - 60 Hz": {
+    "id": 142,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVF 630/E - 60 Hz": {
+    "id": 143,
+    "motorSize": "90 S",
+    "poles": 6,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "EVF 710/A": {
+    "id": 144,
+    "motorSize": "90 S",
+    "poles": 6,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "EVF 710/B": {
+    "id": 145,
+    "motorSize": "90 L",
+    "poles": 6,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVF 710/C": {
+    "id": 146,
+    "motorSize": "90 L",
+    "poles": 4,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "EVF 710/D": {
+    "id": 147,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVF 710/E": {
+    "id": 148,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVF 710/F": {
+    "id": 149,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "EVF 710/G - 60 Hz": {
+    "id": 150,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVF 710/H - 60 Hz": {
+    "id": 151,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "EVF 710/I - 60 Hz": {
+    "id": 152,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVF 710/L - 60 Hz": {
+    "id": 153,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVF 710/M - 60 Hz": {
+    "id": 154,
+    "motorSize": "100 L",
+    "poles": 6,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "EVF 710/N - 60 Hz": {
+    "id": 155,
+    "motorSize": "112 M",
+    "poles": 6,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVF 800/A": {
+    "id": 156,
+    "motorSize": "90 L",
+    "poles": 6,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVF 800/B": {
+    "id": 157,
+    "motorSize": "100 L",
+    "poles": 6,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "EVF 800/C": {
+    "id": 158,
+    "motorSize": "112 M",
+    "poles": 6,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVF 800/D": {
+    "id": 159,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVF 800/E": {
+    "id": 160,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "EVF 800/F": {
+    "id": 161,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVF 800/G": {
+    "id": 162,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVF 800/H - 60 Hz": {
+    "id": 163,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVF 800/I - 60 Hz": {
+    "id": 164,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVF 800/L - 60 Hz": {
+    "id": 165,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "EVF 800/M - 60 Hz": {
+    "id": 166,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "EVF 800/N - 60 Hz": {
+    "id": 167,
+    "motorSize": "112 M",
+    "poles": 6,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVF 800/O - 60 Hz": {
+    "id": 168,
+    "motorSize": "132 S",
+    "poles": 6,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVF 800/P - 60 Hz": {
+    "id": 169,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 4,
+    "frequency": 50
+  },
+  "EVF 900/A": {
+    "id": 170,
+    "motorSize": "112 M",
+    "poles": 6,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVF 900/B": {
+    "id": 171,
+    "motorSize": "132 S",
+    "poles": 6,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVF 900/C": {
+    "id": 172,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVF 900/D": {
+    "id": 173,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVF 900/E - 60 Hz": {
+    "id": 174,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "EVF 900/F - 60 Hz": {
+    "id": 175,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "EVF 900/G - 60 Hz": {
+    "id": 176,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 4,
+    "frequency": 50
+  },
+  "EVF 900/H - 60 Hz": {
+    "id": 177,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVF 1000/A": {
+    "id": 178,
+    "motorSize": "132 S",
+    "poles": 6,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVF 1000/B": {
+    "id": 179,
+    "motorSize": "132 Mb",
+    "poles": 6,
+    "power": 4,
+    "frequency": 50
+  },
+  "EVF 1000/C": {
+    "id": 180,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVF 1000/D": {
+    "id": 181,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "EVF 1000/E - 60 Hz": {
+    "id": 182,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVF 1000/F - 60 Hz": {
+    "id": 183,
+    "motorSize": "160 M",
+    "poles": 6,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVF 1000/G": {
+    "id": 184,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "EVF 1120/A": {
+    "id": 185,
+    "motorSize": "132 M",
+    "poles": 8,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVF 1120/B": {
+    "id": 186,
+    "motorSize": "160 M",
+    "poles": 6,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVF 1120/C": {
+    "id": 187,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "EVF 1120/D - 60 Hz": {
+    "id": 188,
+    "motorSize": "180 L",
+    "poles": 6,
+    "power": 15,
+    "frequency": 50
+  },
+  "EVF 1120/E - 60 Hz": {
+    "id": 189,
+    "motorSize": "160 M",
+    "poles": 8,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVF 1120/F": {
+    "id": 190,
+    "motorSize": "180 M",
+    "poles": 4,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "EVF 1250/A": {
+    "id": 191,
+    "motorSize": "160 M",
+    "poles": 8,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVF 1250/B": {
+    "id": 192,
+    "motorSize": "160 L",
+    "poles": 6,
+    "power": 11,
+    "frequency": 50
+  },
+  "EVF 1250/C": {
+    "id": 193,
+    "motorSize": "180 L",
+    "poles": 6,
+    "power": 15,
+    "frequency": 50
+  },
+  "EVF 1250/D - 60 Hz": {
+    "id": 194,
+    "motorSize": "180 L",
+    "poles": 8,
+    "power": 11,
+    "frequency": 50
+  },
+  "EVF 1400/A": {
+    "id": 195,
+    "motorSize": "180 L",
+    "poles": 8,
+    "power": 11,
+    "frequency": 50
+  },
+  "EVF 1400/B": {
+    "id": 196,
+    "motorSize": "200 L",
+    "poles": 6,
+    "power": 22,
+    "frequency": 50
+  },
+  "EVF 1400/C - 60 Hz": {
+    "id": 197,
+    "motorSize": "225 S",
+    "poles": 8,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "EVF 1400/D": {
+    "id": 198,
+    "motorSize": "200 L",
+    "poles": 6,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "EVc 400": {
+    "id": 199,
+    "motorSize": "71 A",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EVc 500": {
+    "id": 206,
+    "motorSize": "100 L",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EVc 630": {
+    "id": 213,
+    "motorSize": "100 L",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EVc 710": {
+    "id": 220,
+    "motorSize": "100 L",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EVc 800": {
+    "id": 227,
+    "motorSize": "100 L",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EVc 900": {
+    "id": 234,
+    "motorSize": "100 L",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EVc 1000": {
+    "id": 241,
+    "motorSize": "100 L",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EVL 315/A": {
+    "id": 248,
+    "motorSize": "63 B",
+    "poles": 4,
+    "power": 0.18,
+    "frequency": 50
+  },
+  "EVL 315/B": {
+    "id": 249,
+    "motorSize": "71 B",
+    "poles": 2,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "EVL 315/C - 60 Hz": {
+    "id": 250,
+    "motorSize": "80 B",
+    "poles": 2,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVL 315/D - 60 Hz": {
+    "id": 251,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "EVL 355/A": {
+    "id": 252,
+    "motorSize": "63 B",
+    "poles": 4,
+    "power": 0.18,
+    "frequency": 50
+  },
+  "EVL 355/B": {
+    "id": 253,
+    "motorSize": "80 A",
+    "poles": 2,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "EVL 355/C - 60 Hz": {
+    "id": 254,
+    "motorSize": "90 S",
+    "poles": 2,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "EVL 355/D - 60 Hz": {
+    "id": 255,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "EVL 400/A": {
+    "id": 256,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "EVL 400/B": {
+    "id": 257,
+    "motorSize": "80 B",
+    "poles": 2,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVL 400/C - 60 Hz": {
+    "id": 258,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVL 400/D - 60 Hz": {
+    "id": 259,
+    "motorSize": "71 B",
+    "poles": 4,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "EVL 450/A": {
+    "id": 260,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "EVL 450/B": {
+    "id": 261,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVL 450/D - 60 Hz": {
+    "id": 262,
+    "motorSize": "80 A",
+    "poles": 4,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "EVL 500/A": {
+    "id": 263,
+    "motorSize": "80 A",
+    "poles": 4,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "EVL 500/B": {
+    "id": 264,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "EVL 500/D - 60 Hz": {
+    "id": 265,
+    "motorSize": "90 S",
+    "poles": 4,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVL 560/A": {
+    "id": 266,
+    "motorSize": "80 B",
+    "poles": 4,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "EVL 560/B": {
+    "id": 267,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVL 560/D - 60 Hz": {
+    "id": 268,
+    "motorSize": "90 L",
+    "poles": 4,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "EVL 630/A": {
+    "id": 269,
+    "motorSize": "80 A",
+    "poles": 6,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "EVL 630/B": {
+    "id": 270,
+    "motorSize": "90 S",
+    "poles": 4,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVL 630/C*": {
+    "id": 271,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "EVL 630/D - 60 Hz": {
+    "id": 272,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVL 630/E - 60 Hz": {
+    "id": 273,
+    "motorSize": "90 S",
+    "poles": 6,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "EVL 710/A": {
+    "id": 274,
+    "motorSize": "90 S",
+    "poles": 6,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "EVL 710/B": {
+    "id": 275,
+    "motorSize": "90 L",
+    "poles": 6,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVL 710/C": {
+    "id": 276,
+    "motorSize": "90 L",
+    "poles": 4,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "EVL 710/D": {
+    "id": 277,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVL 710/E": {
+    "id": 278,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVL 710/S": {
+    "id": 279,
+    "motorSize": "132MC",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVL 710/G - 60 Hz": {
+    "id": 280,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVL 710/H - 60 Hz": {
+    "id": 281,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "EVL 710/I - 60 Hz": {
+    "id": 282,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVL 710/L - 60 Hz": {
+    "id": 283,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVL 710/M - 60 Hz": {
+    "id": 284,
+    "motorSize": "100 L",
+    "poles": 6,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "EVL 710/N - 60 Hz": {
+    "id": 285,
+    "motorSize": "112 M",
+    "poles": 6,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVL 800/A": {
+    "id": 286,
+    "motorSize": "90 L",
+    "poles": 6,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVL 800/B": {
+    "id": 287,
+    "motorSize": "100 L",
+    "poles": 6,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "EVL 800/C": {
+    "id": 288,
+    "motorSize": "112 M",
+    "poles": 6,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVL 800/D": {
+    "id": 289,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVL 800/E": {
+    "id": 290,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "EVL 800/F": {
+    "id": 291,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVL 800/G": {
+    "id": 292,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVL 800/H - 60 Hz": {
+    "id": 293,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVL 800/I - 60 Hz": {
+    "id": 294,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVL 800/L - 60 Hz": {
+    "id": 295,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "EVL 800/M - 60 Hz": {
+    "id": 296,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "EVL 800/N - 60 Hz": {
+    "id": 297,
+    "motorSize": "112 M",
+    "poles": 6,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVL 800/O - 60 Hz": {
+    "id": 298,
+    "motorSize": "132 S",
+    "poles": 6,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVL 800/P - 60 Hz": {
+    "id": 299,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 4,
+    "frequency": 50
+  },
+  "EVL 900/A": {
+    "id": 300,
+    "motorSize": "112 M",
+    "poles": 6,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVL 900/B": {
+    "id": 301,
+    "motorSize": "132 S",
+    "poles": 6,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVL 900/C": {
+    "id": 302,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVL 900/D": {
+    "id": 303,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVL 900/E - 60 Hz": {
+    "id": 304,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "EVL 900/F - 60 Hz": {
+    "id": 305,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "EVL 900/G - 60 Hz": {
+    "id": 306,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 4,
+    "frequency": 50
+  },
+  "EVL 900/H - 60 Hz": {
+    "id": 307,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVL 1000/A": {
+    "id": 308,
+    "motorSize": "132 S",
+    "poles": 6,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVL 1000/B": {
+    "id": 309,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 4,
+    "frequency": 50
+  },
+  "EVL 1000/C": {
+    "id": 310,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVL 1000/D": {
+    "id": 311,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "EVL 1000/E - 60 Hz": {
+    "id": 312,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVL 1000/F - 60 Hz": {
+    "id": 313,
+    "motorSize": "160 M",
+    "poles": 6,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVL 1000/G": {
+    "id": 314,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "EVL 1120/A": {
+    "id": 315,
+    "motorSize": "132 M",
+    "poles": 8,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVL 1120/B": {
+    "id": 316,
+    "motorSize": "160 M",
+    "poles": 6,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EVL 1120/C": {
+    "id": 317,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "EVL 1120/D - 60 Hz": {
+    "id": 318,
+    "motorSize": "180 L",
+    "poles": 6,
+    "power": 15,
+    "frequency": 50
+  },
+  "EVL 1120/E - 60 Hz": {
+    "id": 319,
+    "motorSize": "160 M",
+    "poles": 8,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVL 1120/F": {
+    "id": 320,
+    "motorSize": "180 M",
+    "poles": 4,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "EVL 1250/A": {
+    "id": 321,
+    "motorSize": "160 M",
+    "poles": 8,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EVL 1250/B": {
+    "id": 322,
+    "motorSize": "160 L",
+    "poles": 6,
+    "power": 11,
+    "frequency": 50
+  },
+  "EVL 1250/C": {
+    "id": 323,
+    "motorSize": "180 L",
+    "poles": 6,
+    "power": 15,
+    "frequency": 50
+  },
+  "EVL 1250/D - 60 Hz": {
+    "id": 324,
+    "motorSize": "180 L",
+    "poles": 8,
+    "power": 11,
+    "frequency": 50
+  },
+  "EVL 1400/A": {
+    "id": 325,
+    "motorSize": "180 L",
+    "poles": 8,
+    "power": 11,
+    "frequency": 50
+  },
+  "EVL 1400/B": {
+    "id": 326,
+    "motorSize": "200 L",
+    "poles": 6,
+    "power": 22,
+    "frequency": 50
+  },
+  "EVL 1400/C - 60 Hz": {
+    "id": 327,
+    "motorSize": "225 S",
+    "poles": 8,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "EVL 1400/D": {
+    "id": 328,
+    "motorSize": "200 L",
+    "poles": 6,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "n.2 EVL 315/A in serie *": {
+    "id": 329,
+    "motorSize": "63 A",
+    "poles": 4,
+    "power": 0.18,
+    "frequency": 50
+  },
+  "n.2 EVL 315/B in serie *": {
+    "id": 330,
+    "motorSize": "71 B",
+    "poles": 2,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "n.2 EVL 355/A in serie *": {
+    "id": 331,
+    "motorSize": "63 A",
+    "poles": 4,
+    "power": 0.18,
+    "frequency": 50
+  },
+  "n.2 EVL 355/B in serie *": {
+    "id": 332,
+    "motorSize": "80 A",
+    "poles": 2,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "n.2 EVL 400/A in serie *": {
+    "id": 333,
+    "motorSize": "63 B",
+    "poles": 4,
+    "power": 0.18,
+    "frequency": 50
+  },
+  "n.2 EVL 400/B in serie *": {
+    "id": 334,
+    "motorSize": "80 B",
+    "poles": 2,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "n.2 EVL 450/A in serie *": {
+    "id": 335,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "n.2 EVL 450/B in serie *": {
+    "id": 336,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "n.2 EVL 500/A in serie *": {
+    "id": 337,
+    "motorSize": "80 A",
+    "poles": 4,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "n.2 EVL 500/B in serie *": {
+    "id": 338,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "n.2 EVL 560/A in serie *": {
+    "id": 339,
+    "motorSize": "80 B",
+    "poles": 4,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "n.2 EVL 560/B in serie *": {
+    "id": 340,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "n.2 EVL 630/A in serie *": {
+    "id": 341,
+    "motorSize": "80 A",
+    "poles": 6,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "n.2 EVL 630/B in serie *": {
+    "id": 342,
+    "motorSize": "90 S",
+    "poles": 4,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "n.2 EVL 630/C in serie *": {
+    "id": 343,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "n.2 EVL 710/A in serie *": {
+    "id": 344,
+    "motorSize": "90 S",
+    "poles": 6,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "n.2 EVL 710/B in serie *": {
+    "id": 345,
+    "motorSize": "90 L",
+    "poles": 6,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "n.2 EVL 710/C in serie *": {
+    "id": 346,
+    "motorSize": "90 L",
+    "poles": 4,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "n.2 EVL 710/D in serie *": {
+    "id": 347,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "n.2 EVL 710/E in serie *": {
+    "id": 348,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "n.2 EVL 710/F in serie *": {
+    "id": 349,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "n.2 EVL 800/A in serie *": {
+    "id": 350,
+    "motorSize": "90 L",
+    "poles": 6,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "n.2 EVL 800/B in serie *": {
+    "id": 351,
+    "motorSize": "100 L",
+    "poles": 6,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "n.2 EVL 800/C in serie *": {
+    "id": 352,
+    "motorSize": "112 M",
+    "poles": 6,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "n.2 EVL 800/D in serie *": {
+    "id": 353,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "n.2 EVL 800/E in serie *": {
+    "id": 354,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "n.2 EVL 800/F in serie *": {
+    "id": 355,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "n.2 EVL 800/G in serie *": {
+    "id": 356,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "n.2 EVL 900/A in serie *": {
+    "id": 357,
+    "motorSize": "112 M",
+    "poles": 6,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "n.2 EVL 900/B in serie *": {
+    "id": 358,
+    "motorSize": "132 S",
+    "poles": 6,
+    "power": 3,
+    "frequency": 50
+  },
+  "n.2 EVL 900/C in serie *": {
+    "id": 359,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "n.2 EVL 900/D in serie *": {
+    "id": 360,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "n.2 EVL 1000/A in serie *": {
+    "id": 361,
+    "motorSize": "132 S",
+    "poles": 6,
+    "power": 3,
+    "frequency": 50
+  },
+  "n.2 EVL 1000/B in serie *": {
+    "id": 362,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 4,
+    "frequency": 50
+  },
+  "n.2 EVL 1000/C in serie *": {
+    "id": 363,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "n.2 EVL 1000/D in serie *": {
+    "id": 364,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "n.2 EVL 1000/G in serie *": {
+    "id": 365,
+    "motorSize": "200",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "n.2 EVL 1120/A in serie *": {
+    "id": 366,
+    "motorSize": "132 M",
+    "poles": 8,
+    "power": 3,
+    "frequency": 50
+  },
+  "n.2 EVL 1120/B in serie *": {
+    "id": 367,
+    "motorSize": "160 M",
+    "poles": 6,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "n.2 EVL 1120/C in serie *": {
+    "id": 368,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "n.2 EVL 1120/F in serie *": {
+    "id": 369,
+    "motorSize": "180 M",
+    "poles": 4,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "n.2 EVL 1250/A in serie *": {
+    "id": 370,
+    "motorSize": "160 M",
+    "poles": 8,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "n.2 EVL 1250/B in serie *": {
+    "id": 371,
+    "motorSize": "160 L",
+    "poles": 6,
+    "power": 11,
+    "frequency": 50
+  },
+  "n.2 EVL 1250/C in serie *": {
+    "id": 372,
+    "motorSize": "180 L",
+    "poles": 6,
+    "power": 15,
+    "frequency": 50
+  },
+  "n.2 EVL 1400/A in serie *": {
+    "id": 373,
+    "motorSize": "180 L",
+    "poles": 8,
+    "power": 11,
+    "frequency": 50
+  },
+  "n.2 EVL 1400/B in serie *": {
+    "id": 374,
+    "motorSize": "200 L",
+    "poles": 6,
+    "power": 22,
+    "frequency": 50
+  },
+  "n.2 EVL 1400/D in serie *": {
+    "id": 375,
+    "motorSize": "200 L",
+    "poles": 6,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "EVT 560/A": {
+    "id": 376,
+    "motorSize": "80 B",
+    "poles": 4,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "EVT 630/B": {
+    "id": 377,
+    "motorSize": "90 S",
+    "poles": 4,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVT 630/A": {
+    "id": 378,
+    "motorSize": "80 A",
+    "poles": 6,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "EVT 710/D": {
+    "id": 379,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVT 710/A": {
+    "id": 380,
+    "motorSize": "90 S",
+    "poles": 6,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "EVT 800/D": {
+    "id": 381,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVT 800/A": {
+    "id": 382,
+    "motorSize": "90 L",
+    "poles": 6,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EVT 900/A": {
+    "id": 383,
+    "motorSize": "112 M",
+    "poles": 6,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EVT 1000/A": {
+    "id": 384,
+    "motorSize": "132 S",
+    "poles": 6,
+    "power": 3,
+    "frequency": 50
+  },
+  "BPR 352/A": {
+    "id": 397,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "BPR 351/B": {
+    "id": 398,
+    "motorSize": "100 L",
+    "poles": 2,
+    "power": 3,
+    "frequency": 50
+  },
+  "BPR 352/C": {
+    "id": 399,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "BPR 351/D": {
+    "id": 400,
+    "motorSize": "71 B",
+    "poles": 4,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "BPR 402/A": {
+    "id": 401,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "BPR 401/B": {
+    "id": 402,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "BPR 401/C": {
+    "id": 403,
+    "motorSize": "80 A",
+    "poles": 4,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "BPR 452/A": {
+    "id": 404,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "BPR 451/B": {
+    "id": 405,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "BPR 452/C": {
+    "id": 406,
+    "motorSize": "80 B",
+    "poles": 4,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "BPR 451/D": {
+    "id": 407,
+    "motorSize": "90 S",
+    "poles": 4,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "BPR 502/A": {
+    "id": 408,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "BPR 501/B": {
+    "id": 409,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "BPR 502/C": {
+    "id": 410,
+    "motorSize": "90 L",
+    "poles": 4,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "BPR 501/D": {
+    "id": 411,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "BPR 502/E": {
+    "id": 412,
+    "motorSize": "80 A",
+    "poles": 6,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "BPR 501/F": {
+    "id": 413,
+    "motorSize": "80 B",
+    "poles": 6,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "BPR 562/A": {
+    "id": 414,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "BPR 561/B": {
+    "id": 415,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "BPR 562/C": {
+    "id": 416,
+    "motorSize": "90 S",
+    "poles": 6,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "BPR 561/D": {
+    "id": 417,
+    "motorSize": "90 L",
+    "poles": 6,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "BPR 632/A": {
+    "id": 418,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "BPR 631/B": {
+    "id": 419,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "BPR 632/C": {
+    "id": 420,
+    "motorSize": "100 L",
+    "poles": 6,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "BPR 631/D": {
+    "id": 421,
+    "motorSize": "112 M",
+    "poles": 6,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "BPR 712/A": {
+    "id": 422,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "BPR 711/B": {
+    "id": 423,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "BPR 712/C": {
+    "id": 424,
+    "motorSize": "132 S",
+    "poles": 6,
+    "power": 3,
+    "frequency": 50
+  },
+  "BPR 711/D": {
+    "id": 425,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 4,
+    "frequency": 50
+  },
+  "BPR 802/A": {
+    "id": 426,
+    "motorSize": "180 M",
+    "poles": 4,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "BPR 801/B": {
+    "id": 427,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "BPR 802/C": {
+    "id": 428,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "BPR 801/D": {
+    "id": 429,
+    "motorSize": "160 M",
+    "poles": 6,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "BPR 903/A": {
+    "id": 430,
+    "motorSize": "200 L",
+    "poles": 4,
+    "power": 30,
+    "frequency": 50
+  },
+  "BPR 902/B": {
+    "id": 431,
+    "motorSize": "225 S",
+    "poles": 4,
+    "power": 37,
+    "frequency": 50
+  },
+  "BPR 901/C": {
+    "id": 432,
+    "motorSize": "225 M",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "BPR 902/D": {
+    "id": 433,
+    "motorSize": "160 L",
+    "poles": 6,
+    "power": 11,
+    "frequency": 50
+  },
+  "BPR 901/E": {
+    "id": 434,
+    "motorSize": "180 L",
+    "poles": 6,
+    "power": 15,
+    "frequency": 50
+  },
+  "BPR 1002/A": {
+    "id": 435,
+    "motorSize": "250 M",
+    "poles": 4,
+    "power": 55,
+    "frequency": 50
+  },
+  "BPR 1001/B": {
+    "id": 436,
+    "motorSize": "280 S",
+    "poles": 4,
+    "power": 75,
+    "frequency": 50
+  },
+  "BPR 1002/C": {
+    "id": 437,
+    "motorSize": "200 L",
+    "poles": 6,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "BPR 1001/D": {
+    "id": 438,
+    "motorSize": "200 L",
+    "poles": 6,
+    "power": 22,
+    "frequency": 50
+  },
+  "APE 351/B": {
+    "id": 439,
+    "motorSize": "71 A",
+    "poles": 2,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "APE 351/A": {
+    "id": 440,
+    "motorSize": "71 B",
+    "poles": 2,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "APE 401/A": {
+    "id": 441,
+    "motorSize": "80 A",
+    "poles": 2,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "APE 451/B": {
+    "id": 442,
+    "motorSize": "80 A",
+    "poles": 2,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "APE 451/A": {
+    "id": 443,
+    "motorSize": "80 B",
+    "poles": 2,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "APE 501/A": {
+    "id": 444,
+    "motorSize": "90 S",
+    "poles": 2,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "APE 561/B": {
+    "id": 445,
+    "motorSize": "90 S",
+    "poles": 2,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "APE 561/A": {
+    "id": 446,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "APE 632": {
+    "id": 447,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "APE 712/A": {
+    "id": 448,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "APE 711/A": {
+    "id": 450,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APE 801/C": {
+    "id": 451,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APE 801/A": {
+    "id": 452,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APE 801/B": {
+    "id": 453,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "APE 901/B": {
+    "id": 455,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APE 901/C": {
+    "id": 456,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APF 502/A*": {
+    "id": 457,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "APF 502/B": {
+    "id": 458,
+    "motorSize": "100 L",
+    "poles": 2,
+    "power": 3,
+    "frequency": 50
+  },
+  "APF 561/A": {
+    "id": 459,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "APF 561/B": {
+    "id": 460,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APF 632/A": {
+    "id": 461,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APF 632/B": {
+    "id": 462,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APF 631/A": {
+    "id": 463,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APF 631/B": {
+    "id": 464,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9.2,
+    "frequency": 50
+  },
+  "APF 712/A*": {
+    "id": 465,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APF 712/B*": {
+    "id": 466,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "APF 712/C": {
+    "id": 467,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APF 712/D": {
+    "id": 468,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APF 711/A": {
+    "id": 469,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APF 711/B": {
+    "id": 470,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APF 711/C": {
+    "id": 471,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APF 802/A": {
+    "id": 472,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APF 802/B": {
+    "id": 473,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APF 802/C": {
+    "id": 474,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APF 801/A": {
+    "id": 475,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APF 801/B": {
+    "id": 476,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APF 801/C": {
+    "id": 477,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APF 801/D": {
+    "id": 478,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APF 902/A": {
+    "id": 479,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APF 902/B": {
+    "id": 480,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APF 902/C": {
+    "id": 481,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APF 902/D": {
+    "id": 482,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APF 901/A": {
+    "id": 483,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APF 901/B": {
+    "id": 484,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APF 901/C": {
+    "id": 485,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APF 901/D": {
+    "id": 486,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APG 502/A": {
+    "id": 487,
+    "motorSize": "100 L",
+    "poles": 2,
+    "power": 3,
+    "frequency": 50
+  },
+  "APG 502/B": {
+    "id": 488,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "APG 502/C*": {
+    "id": 489,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APG 501/A*": {
+    "id": 490,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "APG 501/B": {
+    "id": 491,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APG 501/C": {
+    "id": 492,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APG 562/A": {
+    "id": 493,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APG 562/B": {
+    "id": 494,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APG 562/C": {
+    "id": 495,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "APG 562/D*": {
+    "id": 496,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APG 561/A": {
+    "id": 497,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APG 561/B": {
+    "id": 498,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "APG 561/C": {
+    "id": 499,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APG 561/D": {
+    "id": 500,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APG 632/A*": {
+    "id": 501,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "APG 632/B": {
+    "id": 502,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APG 632/C": {
+    "id": 503,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APG 632/D": {
+    "id": 504,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APG 631/A": {
+    "id": 505,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APG 631/B": {
+    "id": 506,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APG 631/C*": {
+    "id": 507,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APG 712/A*": {
+    "id": 508,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APG 712/B": {
+    "id": 509,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APG 712/C": {
+    "id": 510,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APG 711/A*": {
+    "id": 511,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APG 711/B": {
+    "id": 512,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APG 711/C": {
+    "id": 513,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APG 711/D": {
+    "id": 514,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APG 802/A*": {
+    "id": 515,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APG 802/B": {
+    "id": 516,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APG 802/C": {
+    "id": 517,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APG 802/D*": {
+    "id": 518,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APG 801/A*": {
+    "id": 519,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APG 801/B": {
+    "id": 520,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APG 801/C": {
+    "id": 521,
+    "motorSize": "280 S",
+    "poles": 2,
+    "power": 75,
+    "frequency": 50
+  },
+  "APG 902/A*": {
+    "id": 522,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APG 902/B": {
+    "id": 523,
+    "motorSize": "280 S",
+    "poles": 2,
+    "power": 75,
+    "frequency": 50
+  },
+  "APG 902/C": {
+    "id": 524,
+    "motorSize": "280 M",
+    "poles": 2,
+    "power": 90,
+    "frequency": 50
+  },
+  "APG 902/D*": {
+    "id": 525,
+    "motorSize": "315 S",
+    "poles": 2,
+    "power": 110,
+    "frequency": 50
+  },
+  "APG 901/A": {
+    "id": 526,
+    "motorSize": "280 S",
+    "poles": 2,
+    "power": 75,
+    "frequency": 50
+  },
+  "APG 901/B": {
+    "id": 527,
+    "motorSize": "280 M",
+    "poles": 2,
+    "power": 90,
+    "frequency": 50
+  },
+  "APG 901/C": {
+    "id": 528,
+    "motorSize": "315 S",
+    "poles": 2,
+    "power": 110,
+    "frequency": 50
+  },
+  "APG 901/D": {
+    "id": 529,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRF 631/A*": {
+    "id": 530,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "APRF 631/B": {
+    "id": 531,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APRF 712/A": {
+    "id": 532,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APRF 712/B": {
+    "id": 533,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APRF 712/C": {
+    "id": 534,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "APRF 711/A*": {
+    "id": 535,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APRF 711/B": {
+    "id": 536,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "APRF 711/C": {
+    "id": 537,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APRF 802/A*": {
+    "id": 538,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "APRF 802/B": {
+    "id": 539,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APRF 802/C": {
+    "id": 540,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APRF 801/A": {
+    "id": 541,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APRF 801/B": {
+    "id": 542,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APRF 801/C": {
+    "id": 543,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRF 801/D*": {
+    "id": 544,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "APRF 902/A": {
+    "id": 545,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRF 902/B": {
+    "id": 546,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRF 902/C": {
+    "id": 547,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRF 902/D*": {
+    "id": 548,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "APRF 901/A": {
+    "id": 549,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRF 901/B": {
+    "id": 550,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRF 901/C": {
+    "id": 551,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRF 901/D": {
+    "id": 552,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRF 901/E": {
+    "id": 553,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APRF 1002/A": {
+    "id": 554,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRF 1002/B": {
+    "id": 555,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRF 1002/C": {
+    "id": 556,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRF 1002/D": {
+    "id": 557,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APRF 1001/A": {
+    "id": 558,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRF 1001/B": {
+    "id": 559,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRF 1001/C": {
+    "id": 560,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRF 1001/D": {
+    "id": 561,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "APRF 1122/A": {
+    "id": 562,
+    "motorSize": "280 S",
+    "poles": 2,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRF 1122/B": {
+    "id": 563,
+    "motorSize": "280 M",
+    "poles": 2,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRF 1122/C": {
+    "id": 564,
+    "motorSize": "315 S",
+    "poles": 2,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRF 1122/D": {
+    "id": 565,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "APRF 1121/A": {
+    "id": 566,
+    "motorSize": "280 M",
+    "poles": 2,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRF 1121/B": {
+    "id": 567,
+    "motorSize": "315 S",
+    "poles": 2,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRF 1121/C": {
+    "id": 568,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRF 1121/D": {
+    "id": 569,
+    "motorSize": "180 M",
+    "poles": 4,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRG 501/A": {
+    "id": 570,
+    "motorSize": "100 L",
+    "poles": 2,
+    "power": 3,
+    "frequency": 50
+  },
+  "APRG 501/B": {
+    "id": 571,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "APRG 562/A": {
+    "id": 572,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APRG 561/A": {
+    "id": 573,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APRG 561/B": {
+    "id": 574,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APRG 632/A": {
+    "id": 575,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APRG 632/B": {
+    "id": 576,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "APRG 632/C": {
+    "id": 577,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APRG 631/A*": {
+    "id": 578,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "APRG 631/B": {
+    "id": 579,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APRG 712/A": {
+    "id": 580,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APRG 712/B": {
+    "id": 581,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRG 711/A": {
+    "id": 582,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRG 711/B": {
+    "id": 583,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRG 802/A*": {
+    "id": 584,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRG 802/B": {
+    "id": 585,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRG 802/C": {
+    "id": 586,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRG 801/A": {
+    "id": 587,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRG 801/B": {
+    "id": 588,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRG 801/C": {
+    "id": 589,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRG 801/D*": {
+    "id": 590,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APRG 902/A": {
+    "id": 591,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRG 902/B": {
+    "id": 592,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRG 902/C": {
+    "id": 593,
+    "motorSize": "280 S",
+    "poles": 2,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRG 902/D*": {
+    "id": 594,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APRG 901/A": {
+    "id": 595,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRG 901/B": {
+    "id": 596,
+    "motorSize": "280 S",
+    "poles": 2,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRG 901/C": {
+    "id": 597,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APRG 1002/A": {
+    "id": 598,
+    "motorSize": "280 M",
+    "poles": 2,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRG 1002/B": {
+    "id": 599,
+    "motorSize": "315 S",
+    "poles": 2,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRG 1002/C": {
+    "id": 600,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRG 1002/D": {
+    "id": 601,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "APRG 1001/A": {
+    "id": 602,
+    "motorSize": "315 S",
+    "poles": 2,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRG 1001/B": {
+    "id": 603,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRG 1001/C": {
+    "id": 604,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRG 1001/D": {
+    "id": 605,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "APRG 1122/A": {
+    "id": 606,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRG 1122/B": {
+    "id": 607,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRG 1122/C": {
+    "id": 608,
+    "motorSize": "355 L",
+    "poles": 2,
+    "power": 250,
+    "frequency": 50
+  },
+  "APRG 1122/D": {
+    "id": 609,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRG 1121/A": {
+    "id": 610,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRG 1121/B": {
+    "id": 611,
+    "motorSize": "355 L",
+    "poles": 2,
+    "power": 250,
+    "frequency": 50
+  },
+  "APRG 1121/C": {
+    "id": 612,
+    "motorSize": "200 L",
+    "poles": 4,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRH 561/A*": {
+    "id": 613,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "APRH 561/B": {
+    "id": 614,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APRH 632/A": {
+    "id": 615,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APRH 632/B": {
+    "id": 616,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRH 631/A": {
+    "id": 617,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APRH 631/D": {
+    "id": 618,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "APRH 631/B": {
+    "id": 619,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRH 631/C": {
+    "id": 620,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRH 712/A": {
+    "id": 621,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRH 712/B": {
+    "id": 622,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "APRH 711/A": {
+    "id": 623,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRH 711/B": {
+    "id": 624,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRH 711/C": {
+    "id": 625,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APRH 802/A": {
+    "id": 626,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRH 802/B": {
+    "id": 627,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRH 802/C*": {
+    "id": 628,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APRH 801/A": {
+    "id": 629,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRH 801/B": {
+    "id": 630,
+    "motorSize": "280 S",
+    "poles": 2,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRH 801/C": {
+    "id": 631,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "APRH 902/A": {
+    "id": 632,
+    "motorSize": "280 M",
+    "poles": 2,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRH 902/B*": {
+    "id": 633,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "APRH 901/A": {
+    "id": 634,
+    "motorSize": "280 M",
+    "poles": 2,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRH 901/B": {
+    "id": 635,
+    "motorSize": "315 S",
+    "poles": 2,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRH 901/C": {
+    "id": 636,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "APRH 1003/A": {
+    "id": 637,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRH 1003/B": {
+    "id": 638,
+    "motorSize": "180 M",
+    "poles": 4,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRH 1002/A": {
+    "id": 639,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRH 1002/B": {
+    "id": 640,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRH 1001/A": {
+    "id": 641,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRH 1001/B": {
+    "id": 642,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRH 1001/C": {
+    "id": 643,
+    "motorSize": "200 L",
+    "poles": 4,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRI 632/B": {
+    "id": 644,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APRI 632/A": {
+    "id": 645,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRI 631/B*": {
+    "id": 646,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRI 631/A": {
+    "id": 647,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRI 712/B": {
+    "id": 648,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRI 712/A": {
+    "id": 649,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRI 711/C*": {
+    "id": 650,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "APRI 711/B": {
+    "id": 651,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRI 711/A": {
+    "id": 652,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRI 802/B*": {
+    "id": 653,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APRI 802/A": {
+    "id": 654,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRI 801/C": {
+    "id": 655,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "APRI 801/B": {
+    "id": 656,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRI 801/A": {
+    "id": 657,
+    "motorSize": "280 S",
+    "poles": 2,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRI 902/C": {
+    "id": 658,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "APRI 902/B": {
+    "id": 659,
+    "motorSize": "280 M",
+    "poles": 2,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRI 902/A": {
+    "id": 660,
+    "motorSize": "315 S",
+    "poles": 2,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRI 901/C": {
+    "id": 661,
+    "motorSize": "180 M",
+    "poles": 4,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRI 901/B": {
+    "id": 662,
+    "motorSize": "315 S",
+    "poles": 2,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRI 901/A": {
+    "id": 663,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRI 1002/C": {
+    "id": 664,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRI 1002/B": {
+    "id": 665,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRI 1002/A": {
+    "id": 666,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRI 1001/C": {
+    "id": 667,
+    "motorSize": "200 L",
+    "poles": 4,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRI 1001/B": {
+    "id": 668,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRI 1001/A": {
+    "id": 669,
+    "motorSize": "355 L",
+    "poles": 2,
+    "power": 250,
+    "frequency": 50
+  },
+  "APRL 633/A": {
+    "id": 670,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRL 632/A": {
+    "id": 671,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRL 631/A": {
+    "id": 672,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRL 713/A": {
+    "id": 673,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRL 712/A": {
+    "id": 674,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRL 711/A": {
+    "id": 675,
+    "motorSize": "280 S",
+    "poles": 2,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRL 803/A": {
+    "id": 676,
+    "motorSize": "280 M",
+    "poles": 2,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRL 802/A": {
+    "id": 677,
+    "motorSize": "315 S",
+    "poles": 2,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRL 801/A": {
+    "id": 678,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRED 631/A": {
+    "id": 679,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "APRED 712/A": {
+    "id": 680,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "APRED 711/A": {
+    "id": 681,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APRED 801/A": {
+    "id": 682,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRED 901/A": {
+    "id": 683,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRED 1003/A": {
+    "id": 684,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRED 1002/A": {
+    "id": 685,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRED 1001/A": {
+    "id": 686,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRED 1001/B": {
+    "id": 687,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRED 1122/A": {
+    "id": 688,
+    "motorSize": "280 S",
+    "poles": 2,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRFD 631/A": {
+    "id": 689,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "APRFD 631/B": {
+    "id": 690,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APRFD 712/A": {
+    "id": 691,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "APRFD 712/B": {
+    "id": 692,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRFD 711/A": {
+    "id": 693,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRFD 711/B": {
+    "id": 694,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRFD 802/A": {
+    "id": 695,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRFD 802/B": {
+    "id": 696,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRFD 801/A": {
+    "id": 697,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRFD 801/B": {
+    "id": 698,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRFD 902/A": {
+    "id": 699,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRFD 902/B": {
+    "id": 700,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRFD 901/A": {
+    "id": 701,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRFD 901/B": {
+    "id": 702,
+    "motorSize": "280 S",
+    "poles": 2,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRFD 1002/A": {
+    "id": 703,
+    "motorSize": "280 S",
+    "poles": 2,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRFD 1002/B": {
+    "id": 704,
+    "motorSize": "280 M",
+    "poles": 2,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRFD 1002/C": {
+    "id": 705,
+    "motorSize": "315 S",
+    "poles": 2,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRFD 1001/A": {
+    "id": 706,
+    "motorSize": "280 M",
+    "poles": 2,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRFD 1001/B": {
+    "id": 707,
+    "motorSize": "315 S",
+    "poles": 2,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRFD 1001/C": {
+    "id": 708,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRFD 1122/A": {
+    "id": 709,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRFD 1122/B": {
+    "id": 710,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRGD 902/A": {
+    "id": 711,
+    "motorSize": "315 S",
+    "poles": 2,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRGD 902/B": {
+    "id": 712,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRGD 901/A": {
+    "id": 713,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRGD 901/B": {
+    "id": 714,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRGD 1002/A": {
+    "id": 715,
+    "motorSize": "315 M",
+    "poles": 2,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRGD 1002/B": {
+    "id": 716,
+    "motorSize": "355 L",
+    "poles": 2,
+    "power": 250,
+    "frequency": 50
+  },
+  "APRGD 1002/C": {
+    "id": 717,
+    "motorSize": "355 L",
+    "poles": 2,
+    "power": 250,
+    "frequency": 50
+  },
+  "APRGD 1001/A": {
+    "id": 718,
+    "motorSize": "355 L",
+    "poles": 2,
+    "power": 250,
+    "frequency": 50
+  },
+  "APRGD 1001/B": {
+    "id": 719,
+    "motorSize": "355 L",
+    "poles": 2,
+    "power": 250,
+    "frequency": 50
+  },
+  "APRGD 1001/C": {
+    "id": 720,
+    "motorSize": "355 L",
+    "poles": 2,
+    "power": 300,
+    "frequency": 50
+  },
+  "APRF/N8 1121": {
+    "id": 721,
+    "motorSize": "180 M",
+    "poles": 4,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "APRF/N8 1252": {
+    "id": 722,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRF/N8 1251": {
+    "id": 723,
+    "motorSize": "200 L",
+    "poles": 4,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRF/N8 1402": {
+    "id": 724,
+    "motorSize": "225 S",
+    "poles": 4,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRF/N8 1401": {
+    "id": 725,
+    "motorSize": "225 M",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRF/N8 1602": {
+    "id": 726,
+    "motorSize": "280 S",
+    "poles": 4,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRF/N8 1601": {
+    "id": 727,
+    "motorSize": "280 M",
+    "poles": 4,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRF/N8 1802": {
+    "id": 728,
+    "motorSize": "315 S",
+    "poles": 4,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRF/N8 1801": {
+    "id": 729,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRG/N8 1121D": {
+    "id": 730,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "APRG/N8 1121E": {
+    "id": 731,
+    "motorSize": "200 L",
+    "poles": 4,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRG/N8 1252A": {
+    "id": 732,
+    "motorSize": "200 L",
+    "poles": 4,
+    "power": 30,
+    "frequency": 50
+  },
+  "APRG/N8 1252B": {
+    "id": 733,
+    "motorSize": "225 S",
+    "poles": 4,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRG/N8 1252C": {
+    "id": 734,
+    "motorSize": "225 M",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRG/N8 1251A": {
+    "id": 735,
+    "motorSize": "225 S",
+    "poles": 4,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRG/N8 1251B": {
+    "id": 736,
+    "motorSize": "225 M",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRG/N8 1251C": {
+    "id": 737,
+    "motorSize": "250 M",
+    "poles": 4,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRG/N8 1402A": {
+    "id": 738,
+    "motorSize": "225 M",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRG/N8 1402B": {
+    "id": 739,
+    "motorSize": "250 M",
+    "poles": 4,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRG/N8 1402C": {
+    "id": 740,
+    "motorSize": "280 S",
+    "poles": 4,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRG/N8 1401A": {
+    "id": 741,
+    "motorSize": "250 M",
+    "poles": 4,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRG/N8 1401B": {
+    "id": 742,
+    "motorSize": "280 S",
+    "poles": 4,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRG/N8 1401C": {
+    "id": 743,
+    "motorSize": "280 M",
+    "poles": 4,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRG/N8 1602A": {
+    "id": 744,
+    "motorSize": "280 M",
+    "poles": 4,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRG/N8 1602B": {
+    "id": 745,
+    "motorSize": "315 S",
+    "poles": 4,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRG/N8 1602C": {
+    "id": 746,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRG/N8 1602D": {
+    "id": 747,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRG/N8 1601A": {
+    "id": 748,
+    "motorSize": "315 S",
+    "poles": 4,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRG/N8 1601B": {
+    "id": 749,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRG/N8 1601C": {
+    "id": 750,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRG/N8 1601D": {
+    "id": 751,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRG/N8 1802A": {
+    "id": 752,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRG/N8 1802/S": {
+    "id": 754,
+    "motorSize": "280 S",
+    "poles": 6,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRG/N8 1801A": {
+    "id": 755,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRG/N8 1801B": {
+    "id": 756,
+    "motorSize": "355 L",
+    "poles": 4,
+    "power": 250,
+    "frequency": 50
+  },
+  "APRG/N8 1801C": {
+    "id": 757,
+    "motorSize": "355 L",
+    "poles": 4,
+    "power": 300,
+    "frequency": 50
+  },
+  "APRH/N8 1121A": {
+    "id": 758,
+    "motorSize": "225 S",
+    "poles": 4,
+    "power": 37,
+    "frequency": 50
+  },
+  "APRH/N8 1121B": {
+    "id": 759,
+    "motorSize": "225 M",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRH/N8 1252A": {
+    "id": 760,
+    "motorSize": "250 M",
+    "poles": 4,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRH/N8 1251A": {
+    "id": 761,
+    "motorSize": "280 S",
+    "poles": 4,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRH/N8 1402A": {
+    "id": 762,
+    "motorSize": "280 M",
+    "poles": 4,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRH/N8 1402B": {
+    "id": 763,
+    "motorSize": "315 S",
+    "poles": 4,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRH/N8 1401A": {
+    "id": 764,
+    "motorSize": "315 S",
+    "poles": 4,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRH/N8 1401B": {
+    "id": 765,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRH/N8 1602A": {
+    "id": 766,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRH/N8 1602B": {
+    "id": 767,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRH/N8 1601A": {
+    "id": 768,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRH/N8 1601B": {
+    "id": 769,
+    "motorSize": "355 L",
+    "poles": 4,
+    "power": 250,
+    "frequency": 50
+  },
+  "APRH/N8 1802A": {
+    "id": 770,
+    "motorSize": "355 L",
+    "poles": 4,
+    "power": 300,
+    "frequency": 50
+  },
+  "APRH/N8 1802B": {
+    "id": 771,
+    "motorSize": "355 L",
+    "poles": 4,
+    "power": 355,
+    "frequency": 50
+  },
+  "APRH/N8 1802C": {
+    "id": 772,
+    "motorSize": "355 L",
+    "poles": 4,
+    "power": 425,
+    "frequency": 50
+  },
+  "APRH/N8 1801A": {
+    "id": 773,
+    "motorSize": "355 L",
+    "poles": 4,
+    "power": 355,
+    "frequency": 50
+  },
+  "APRH/N8 1801B": {
+    "id": 774,
+    "motorSize": "355 L",
+    "poles": 4,
+    "power": 425,
+    "frequency": 50
+  },
+  "APRH/N8 1801C": {
+    "id": 775,
+    "motorSize": "400 LX",
+    "poles": 4,
+    "power": 500,
+    "frequency": 50
+  },
+  "APRI/N8 1121A": {
+    "id": 776,
+    "motorSize": "225 M",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRI/N8 1121B": {
+    "id": 777,
+    "motorSize": "250 M",
+    "poles": 4,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRI/N8 1252A": {
+    "id": 778,
+    "motorSize": "250 M",
+    "poles": 4,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRI/N8 1252B": {
+    "id": 779,
+    "motorSize": "280 S",
+    "poles": 4,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRI/N8 1251A": {
+    "id": 780,
+    "motorSize": "280 S",
+    "poles": 4,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRI/N8 1251B": {
+    "id": 781,
+    "motorSize": "280 M",
+    "poles": 4,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRI/N8 1402A": {
+    "id": 782,
+    "motorSize": "315 S",
+    "poles": 4,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRI/N8 1402B": {
+    "id": 783,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRI/N8 1401A": {
+    "id": 784,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRI/N8 1401B": {
+    "id": 785,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRI/N8 1602A": {
+    "id": 786,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRI/N8 1602B": {
+    "id": 787,
+    "motorSize": "355 L",
+    "poles": 4,
+    "power": 250,
+    "frequency": 50
+  },
+  "APRI/N8 1601A": {
+    "id": 788,
+    "motorSize": "355 L",
+    "poles": 4,
+    "power": 300,
+    "frequency": 50
+  },
+  "APRI/N8 1601B": {
+    "id": 789,
+    "motorSize": "355 L",
+    "poles": 4,
+    "power": 355,
+    "frequency": 50
+  },
+  "APRI/N8 1802A": {
+    "id": 790,
+    "motorSize": "355 L",
+    "poles": 4,
+    "power": 355,
+    "frequency": 50
+  },
+  "APRI/N8 1802B": {
+    "id": 791,
+    "motorSize": "355 L",
+    "poles": 4,
+    "power": 425,
+    "frequency": 50
+  },
+  "APRI/N8 1801A": {
+    "id": 792,
+    "motorSize": "400 LX",
+    "poles": 4,
+    "power": 500,
+    "frequency": 50
+  },
+  "APRI/N8 1801B": {
+    "id": 793,
+    "motorSize": "400 LW",
+    "poles": 4,
+    "power": 560,
+    "frequency": 50
+  },
+  "TG 502/A": {
+    "id": 794,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "TG 501/B": {
+    "id": 795,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "TG 501/C": {
+    "id": 796,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "TG 561/A": {
+    "id": 797,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "TG 561/B": {
+    "id": 798,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "TG 561/C": {
+    "id": 799,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "TG 561/D": {
+    "id": 800,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "TG 631/A": {
+    "id": 801,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "TG 631/B": {
+    "id": 802,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "TG 631/C": {
+    "id": 803,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "TG 711/A": {
+    "id": 804,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "TG 711/B": {
+    "id": 805,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "TG 711/C": {
+    "id": 806,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "TG 801/A": {
+    "id": 807,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "TG 801/B": {
+    "id": 808,
+    "motorSize": "225 M",
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "TG 801/C": {
+    "id": 809,
+    "motorSize": "250 M",
+    "poles": 2,
+    "power": 55,
+    "frequency": 50
+  },
+  "TG 801/D": {
+    "id": 810,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "TG 801/E": {
+    "id": 811,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "TG 901/A": {
+    "id": 812,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "TG 901/B": {
+    "id": 813,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "TG 1001/A": {
+    "id": 814,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "TG 1001/B": {
+    "id": 815,
+    "motorSize": "180 M",
+    "poles": 4,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "TG 1001/C": {
+    "id": 816,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "TG 1121/A": {
+    "id": 817,
+    "motorSize": "200 L",
+    "poles": 4,
+    "power": 30,
+    "frequency": 50
+  },
+  "TG 1121/B": {
+    "id": 818,
+    "motorSize": "225 S",
+    "poles": 4,
+    "power": 37,
+    "frequency": 50
+  },
+  "TF 501/A": {
+    "id": 819,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "TF 501/B": {
+    "id": 820,
+    "motorSize": "100 L",
+    "poles": 2,
+    "power": 3,
+    "frequency": 50
+  },
+  "TF 561/A*": {
+    "id": 821,
+    "motorSize": "100 L",
+    "poles": 2,
+    "power": 3,
+    "frequency": 50
+  },
+  "TF 561/B": {
+    "id": 822,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "TF 631/A": {
+    "id": 823,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "TF 631/B": {
+    "id": 824,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "TF 711/A*": {
+    "id": 825,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "TF 711/B": {
+    "id": 826,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "TF 711/C": {
+    "id": 827,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "TF 801/A": {
+    "id": 828,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "TF 801/B": {
+    "id": 829,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "TF 801/C*": {
+    "id": 830,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "TF 801/D*": {
+    "id": 831,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "TF 801/E": {
+    "id": 832,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "TF 901/A*": {
+    "id": 833,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "TF 901/B": {
+    "id": 834,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "TF 1001/A*": {
+    "id": 835,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "TQ 631/A": {
+    "id": 836,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "TQ 712/A*": {
+    "id": 837,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "TQ 711/A": {
+    "id": 838,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "TQ 802/A*": {
+    "id": 839,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "TQ 801/A": {
+    "id": 840,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "TQ 902/A": {
+    "id": 841,
+    "motorSize": "180 M",
+    "poles": 4,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "TQ 902/B": {
+    "id": 842,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "TR 631/B": {
+    "id": 843,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "TR 711": {
+    "id": 844,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "TR 802": {
+    "id": 845,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "TR 801": {
+    "id": 846,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "TR 902": {
+    "id": 847,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "TR 901": {
+    "id": 848,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "TR 1002": {
+    "id": 849,
+    "motorSize": "200 L",
+    "poles": 4,
+    "power": 30,
+    "frequency": 50
+  },
+  "TR 1001": {
+    "id": 850,
+    "motorSize": "225 S",
+    "poles": 4,
+    "power": 37,
+    "frequency": 50
+  },
+  "TR 1122": {
+    "id": 851,
+    "motorSize": "225 M",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "TR 1121": {
+    "id": 852,
+    "motorSize": "250 M",
+    "poles": 4,
+    "power": 55,
+    "frequency": 50
+  },
+  "TH 402/A": {
+    "id": 853,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "TH 401/A": {
+    "id": 854,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "TH 452/A": {
+    "id": 855,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "TH 451/A": {
+    "id": 856,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "TH 451/B": {
+    "id": 857,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "TH 502/A": {
+    "id": 858,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "TH 501/A": {
+    "id": 859,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "TH 501/B": {
+    "id": 860,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "TH 562/A": {
+    "id": 861,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "TH 561/A": {
+    "id": 862,
+    "motorSize": "180 M",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "TH 561/B": {
+    "id": 863,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "TH 712/A*": {
+    "id": 864,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "TH 711/A": {
+    "id": 865,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "TH 802/A": {
+    "id": 866,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "TH 802/B": {
+    "id": 867,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "TH 801/A": {
+    "id": 868,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "TH 801/B": {
+    "id": 869,
+    "motorSize": "180 M",
+    "poles": 4,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "TH 902/A": {
+    "id": 870,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "TH 902/B": {
+    "id": 871,
+    "motorSize": "200 L",
+    "poles": 4,
+    "power": 30,
+    "frequency": 50
+  },
+  "TH 901/A": {
+    "id": 872,
+    "motorSize": "200 L",
+    "poles": 4,
+    "power": 30,
+    "frequency": 50
+  },
+  "TH 901/B": {
+    "id": 873,
+    "motorSize": "225 S",
+    "poles": 4,
+    "power": 37,
+    "frequency": 50
+  },
+  "TH 1002/A": {
+    "id": 874,
+    "motorSize": "225 S",
+    "poles": 4,
+    "power": 37,
+    "frequency": 50
+  },
+  "TH 1002/B": {
+    "id": 875,
+    "motorSize": "225 M",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "TH 1001/A": {
+    "id": 876,
+    "motorSize": "225 M",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "TH 1001/B": {
+    "id": 877,
+    "motorSize": "250 M",
+    "poles": 4,
+    "power": 55,
+    "frequency": 50
+  },
+  "TH 1122/A": {
+    "id": 878,
+    "motorSize": "250 M",
+    "poles": 4,
+    "power": 55,
+    "frequency": 50
+  },
+  "TH 1122/B": {
+    "id": 879,
+    "motorSize": "280 S",
+    "poles": 4,
+    "power": 75,
+    "frequency": 50
+  },
+  "TH 1121/A": {
+    "id": 880,
+    "motorSize": "280 S",
+    "poles": 4,
+    "power": 75,
+    "frequency": 50
+  },
+  "TH 1121/B": {
+    "id": 881,
+    "motorSize": "280 M",
+    "poles": 4,
+    "power": 90,
+    "frequency": 50
+  },
+  "TH 1121/C": {
+    "id": 882,
+    "motorSize": "315 S",
+    "poles": 4,
+    "power": 110,
+    "frequency": 50
+  },
+  "BP 161/A": {
+    "id": 883,
+    "motorSize": "63 B",
+    "poles": 2,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "BP 161/B": {
+    "id": 884,
+    "motorSize": "63 B",
+    "poles": 4,
+    "power": 0.18,
+    "frequency": 50
+  },
+  "BP 201/A": {
+    "id": 885,
+    "motorSize": "80 A",
+    "poles": 2,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "BP 201/B": {
+    "id": 886,
+    "motorSize": "80 B",
+    "poles": 2,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "BP 201/C": {
+    "id": 887,
+    "motorSize": "71 A",
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "BP 221/A": {
+    "id": 888,
+    "motorSize": "90 S",
+    "poles": 2,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "BP 221/B": {
+    "id": 889,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "BP 221/C": {
+    "id": 890,
+    "motorSize": "71 B",
+    "poles": 4,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "BP 251/A": {
+    "id": 891,
+    "motorSize": "100 L",
+    "poles": 2,
+    "power": 3,
+    "frequency": 50
+  },
+  "BP 251/B": {
+    "id": 892,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "BP 251/C": {
+    "id": 893,
+    "motorSize": "80 A",
+    "poles": 4,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "BP 281/A": {
+    "id": 894,
+    "motorSize": "80 B",
+    "poles": 4,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "BP 311/A": {
+    "id": 895,
+    "motorSize": "90 S",
+    "poles": 4,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "BP 311/B": {
+    "id": 896,
+    "motorSize": "90 L",
+    "poles": 4,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "BP 311/C": {
+    "id": 897,
+    "motorSize": "80 A",
+    "poles": 6,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "BP 311/D": {
+    "id": 898,
+    "motorSize": "80 B",
+    "poles": 6,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "BP 351/A": {
+    "id": 899,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "BP 351/B": {
+    "id": 900,
+    "motorSize": "100 L",
+    "poles": 4,
+    "power": 3,
+    "frequency": 50
+  },
+  "BP 351/C": {
+    "id": 901,
+    "motorSize": "90 S",
+    "poles": 6,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "BP 351/D": {
+    "id": 902,
+    "motorSize": "90 L",
+    "poles": 6,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "BP 401/A": {
+    "id": 903,
+    "motorSize": "112 M",
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "BP 401/B": {
+    "id": 904,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "BP 401/C": {
+    "id": 905,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "BP 401/D": {
+    "id": 906,
+    "motorSize": "100 L",
+    "poles": 6,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "BP 401/E": {
+    "id": 907,
+    "motorSize": "112 M",
+    "poles": 6,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "BP 451/A": {
+    "id": 908,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "BP 451/B": {
+    "id": 909,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 9,
+    "frequency": 50
+  },
+  "BP 451/C": {
+    "id": 910,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "BP 451/D": {
+    "id": 911,
+    "motorSize": "132 S",
+    "poles": 6,
+    "power": 3,
+    "frequency": 50
+  },
+  "BP 501/A": {
+    "id": 912,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "BP 501/B": {
+    "id": 913,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "BP 501/C*": {
+    "id": 914,
+    "motorSize": "180 M",
+    "poles": 4,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "BP 501/D": {
+    "id": 915,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 4,
+    "frequency": 50
+  },
+  "BP 501/E": {
+    "id": 916,
+    "motorSize": "132 M",
+    "poles": 6,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "MPR 352": {
+    "id": 917,
+    "motorSize": "80 A",
+    "poles": 2,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "MPR 351": {
+    "id": 918,
+    "motorSize": "80 B",
+    "poles": 2,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "MPR 402": {
+    "id": 919,
+    "motorSize": "90 S",
+    "poles": 2,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "MPR 401": {
+    "id": 920,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "MPR 452": {
+    "id": 921,
+    "motorSize": "100 L",
+    "poles": 2,
+    "power": 3,
+    "frequency": 50
+  },
+  "MPR 451": {
+    "id": 922,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "MPR 502": {
+    "id": 923,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "MPR 501": {
+    "id": 924,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EU 221": {
+    "id": 925,
+    "motorSize": "63 A",
+    "poles": 2,
+    "power": 0.18,
+    "frequency": 50
+  },
+  "EU 251": {
+    "id": 926,
+    "motorSize": "71 A",
+    "poles": 2,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "EU 281": {
+    "id": 927,
+    "motorSize": "71 B",
+    "poles": 2,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "EU 312": {
+    "id": 928,
+    "motorSize": "80 A",
+    "poles": 2,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "EU 311": {
+    "id": 929,
+    "motorSize": "80 B",
+    "poles": 2,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EU 352": {
+    "id": 930,
+    "motorSize": "90 S",
+    "poles": 2,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "EU 351": {
+    "id": 931,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EU 402": {
+    "id": 932,
+    "motorSize": "100 L",
+    "poles": 2,
+    "power": 3,
+    "frequency": 50
+  },
+  "EU 401": {
+    "id": 933,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "EU 452": {
+    "id": 934,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EU 451": {
+    "id": 935,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EU 502": {
+    "id": 936,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "EU 501": {
+    "id": 937,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "EU 562": {
+    "id": 938,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "EU 561": {
+    "id": 939,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "EU 631": {
+    "id": 940,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EU 712": {
+    "id": 941,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EU 802": {
+    "id": 942,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "EU 801": {
+    "id": 943,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "EU 902": {
+    "id": 944,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "EU 901": {
+    "id": 945,
+    "motorSize": "200 L",
+    "poles": 4,
+    "power": 30,
+    "frequency": 50
+  },
+  "EU 1002": {
+    "id": 946,
+    "motorSize": "225 S",
+    "poles": 4,
+    "power": 37,
+    "frequency": 50
+  },
+  "EU 1001": {
+    "id": 947,
+    "motorSize": "225 M",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "EUM 251": {
+    "id": 948,
+    "motorSize": "71 A",
+    "poles": 2,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "EUM 281": {
+    "id": 949,
+    "motorSize": "71 B",
+    "poles": 2,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "EUM 311": {
+    "id": 950,
+    "motorSize": "80 B",
+    "poles": 2,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "EUM 351": {
+    "id": 951,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "EUM 401": {
+    "id": 952,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "EUM 451": {
+    "id": 953,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EUM 501": {
+    "id": 954,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "EUM 562": {
+    "id": 955,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "EUM 561": {
+    "id": 956,
+    "motorSize": "160 L",
+    "poles": 2,
+    "power": 18.5,
+    "frequency": 50
+  },
+  "EUM 632": {
+    "id": 957,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "EUM 631": {
+    "id": 958,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 37,
+    "frequency": 50
+  },
+  "EUM 631/B*": {
+    "id": 959,
+    "motorSize": "132 S",
+    "poles": 4,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "EUM 712": {
+    "id": 960,
+    "motorSize": "132 M",
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "EUM 802": {
+    "id": 961,
+    "motorSize": "160 M",
+    "poles": 4,
+    "power": 11,
+    "frequency": 50
+  },
+  "EUM 801": {
+    "id": 962,
+    "motorSize": "160 L",
+    "poles": 4,
+    "power": 15,
+    "frequency": 50
+  },
+  "EUM 902": {
+    "id": 963,
+    "motorSize": "180 L",
+    "poles": 4,
+    "power": 22,
+    "frequency": 50
+  },
+  "EUM 901": {
+    "id": 964,
+    "motorSize": "200 L",
+    "poles": 4,
+    "power": 30,
+    "frequency": 50
+  },
+  "EUM 1002": {
+    "id": 965,
+    "motorSize": "225 S",
+    "poles": 4,
+    "power": 37,
+    "frequency": 50
+  },
+  "EUM 1001": {
+    "id": 966,
+    "motorSize": "225 M",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "TPA 221": {
+    "id": 967,
+    "motorSize": "71 A",
+    "poles": 2,
+    "power": 0.37,
+    "frequency": 50
+  },
+  "TPA 251": {
+    "id": 968,
+    "motorSize": "71 B",
+    "poles": 2,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "TPA 282*": {
+    "id": 969,
+    "motorSize": "80 A",
+    "poles": 2,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "TPA 281": {
+    "id": 970,
+    "motorSize": "80 B",
+    "poles": 2,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "TPA 312*": {
+    "id": 971,
+    "motorSize": "90 S",
+    "poles": 2,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "TPA 311": {
+    "id": 972,
+    "motorSize": "90 L",
+    "poles": 2,
+    "power": 2.2,
+    "frequency": 50
+  },
+  "TPA 352": {
+    "id": 973,
+    "motorSize": "100 L",
+    "poles": 2,
+    "power": 3,
+    "frequency": 50
+  },
+  "TPA 351": {
+    "id": 974,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "TPA 402": {
+    "id": 975,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "TPA 401": {
+    "id": 976,
+    "motorSize": "132 S",
+    "poles": 2,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "TPA 452*": {
+    "id": 977,
+    "motorSize": "132 M",
+    "poles": 2,
+    "power": 9,
+    "frequency": 50
+  },
+  "TPA 451": {
+    "id": 978,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "BPc 451": {
+    "id": 979,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPc 501": {
+    "id": 980,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPc 561": {
+    "id": 981,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPc 631": {
+    "id": 982,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPc 401": {
+    "id": 983,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPc 711": {
+    "id": 984,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPc 801": {
+    "id": 985,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPc 901": {
+    "id": 986,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPc 1001": {
+    "id": 987,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 501.1": {
+    "id": 988,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 401.1": {
+    "id": 989,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 711.1": {
+    "id": 990,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 561.1": {
+    "id": 991,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 1001.1": {
+    "id": 992,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 801.1": {
+    "id": 993,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 1121.1": {
+    "id": 994,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 631.1": {
+    "id": 995,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 451.1": {
+    "id": 996,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 901.1": {
+    "id": 997,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 1251.1": {
+    "id": 998,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 1401.1": {
+    "id": 999,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 1601.1": {
+    "id": 1000,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 401.2": {
+    "id": 1001,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 1401": {
+    "id": 1002,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 451.2": {
+    "id": 1003,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 1601": {
+    "id": 1004,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 901.2": {
+    "id": 1005,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 501.2": {
+    "id": 1006,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 561.2 copia": {
+    "id": 1007,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 631.2": {
+    "id": 1008,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 711.2": {
+    "id": 1009,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 801.2": {
+    "id": 1010,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 1001.2": {
+    "id": 1011,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 1121.2": {
+    "id": 1012,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 1251.2": {
+    "id": 1013,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 401": {
+    "id": 1014,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 451": {
+    "id": 1015,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 801": {
+    "id": 1016,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 501": {
+    "id": 1017,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 901": {
+    "id": 1018,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 561": {
+    "id": 1019,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 631": {
+    "id": 1020,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 1001": {
+    "id": 1021,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 1601": {
+    "id": 1022,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 1121": {
+    "id": 1023,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 711": {
+    "id": 1024,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 1251": {
+    "id": 1025,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 1401": {
+    "id": 1026,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 1001": {
+    "id": 1027,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 631": {
+    "id": 1028,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 1121": {
+    "id": 1029,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 711": {
+    "id": 1030,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 401": {
+    "id": 1031,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 1251": {
+    "id": 1032,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 801": {
+    "id": 1033,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 1401": {
+    "id": 1034,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 451": {
+    "id": 1035,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 501": {
+    "id": 1036,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 901": {
+    "id": 1037,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 1601": {
+    "id": 1038,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 561": {
+    "id": 1039,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APGc 1121": {
+    "id": 1042,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APFc 631": {
+    "id": 1043,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APFc 711": {
+    "id": 1045,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APFc 801": {
+    "id": 1046,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APEc 801": {
+    "id": 1047,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APGc 631": {
+    "id": 1048,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APGc 901": {
+    "id": 1050,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APEc 901": {
+    "id": 1051,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APFc 901": {
+    "id": 1052,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APGc 711": {
+    "id": 1053,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APGc 801": {
+    "id": 1054,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APGc 1001": {
+    "id": 1055,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APEc 1001": {
+    "id": 1056,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APF 1001": {
+    "id": 1057,
+    "motorSize": "",
+    "poles": 2,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRFc 1251": {
+    "id": 1060,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRFc 1121": {
+    "id": 1062,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRLc 901": {
+    "id": 1064,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRFc 1401": {
+    "id": 1066,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRGc 1121": {
+    "id": 1067,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRLc 1001": {
+    "id": 1070,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRIc 901": {
+    "id": 1071,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRFc 711": {
+    "id": 1072,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRFc 1601": {
+    "id": 1075,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRGc 1251": {
+    "id": 1076,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRFc 801": {
+    "id": 1077,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRLc 631": {
+    "id": 1081,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRHc 1121": {
+    "id": 1083,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRIc 1001": {
+    "id": 1084,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRHc 1251": {
+    "id": 1086,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRLc 1121": {
+    "id": 1087,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRGc 1001": {
+    "id": 1090,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRLc 711": {
+    "id": 1091,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRGc 711": {
+    "id": 1093,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRIc 1121": {
+    "id": 1095,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRHc 1401": {
+    "id": 1096,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRLc 1251": {
+    "id": 1099,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRFc 901": {
+    "id": 1100,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRGc 801": {
+    "id": 1101,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRGc 1601": {
+    "id": 1104,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRIc 1251": {
+    "id": 1106,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRLc 801": {
+    "id": 1110,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRHc 631": {
+    "id": 1111,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRGc 901": {
+    "id": 1112,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRIc 631": {
+    "id": 1113,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRHc 1001": {
+    "id": 1115,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRHc 801": {
+    "id": 1116,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRIc 1401": {
+    "id": 1119,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRLc 1401": {
+    "id": 1121,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRFc 1001": {
+    "id": 1122,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRHc 711": {
+    "id": 1123,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRIc 711": {
+    "id": 1124,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRHc 901": {
+    "id": 1125,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRHc 1601": {
+    "id": 1127,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRIc 1601": {
+    "id": 1128,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRIc 801": {
+    "id": 1130,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRLc 1601": {
+    "id": 1132,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 801": {
+    "id": 1137,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 901": {
+    "id": 1138,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 561": {
+    "id": 1139,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 1401 VECCHIO ": {
+    "id": 1140,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 1001": {
+    "id": 1141,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 631": {
+    "id": 1142,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 1121": {
+    "id": 1143,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 1601": {
+    "id": 1144,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 711": {
+    "id": 1145,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 1251": {
+    "id": 1146,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TPALc 561*": {
+    "id": 1147,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TPALc 711*": {
+    "id": 1148,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TPALc 451*": {
+    "id": 1149,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TGc 901": {
+    "id": 1150,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TGc 501": {
+    "id": 1151,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TGc 1001": {
+    "id": 1152,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TGc 561": {
+    "id": 1153,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TGc 631": {
+    "id": 1154,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TGc 1121": {
+    "id": 1155,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TGc 711": {
+    "id": 1156,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TGc 801": {
+    "id": 1157,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TFc 501": {
+    "id": 1158,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TFc 901": {
+    "id": 1159,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TFc 561": {
+    "id": 1160,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TFc 1001": {
+    "id": 1161,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TFc 631": {
+    "id": 1162,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TFc 711": {
+    "id": 1163,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TFc 801": {
+    "id": 1164,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TTRc 711": {
+    "id": 1165,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TTRc 801": {
+    "id": 1166,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TTRc 1251": {
+    "id": 1167,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TTRc 901": {
+    "id": 1168,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TTRc 561": {
+    "id": 1169,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TTRc 631": {
+    "id": 1170,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TTRc 1001": {
+    "id": 1171,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TTRc 1401": {
+    "id": 1172,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TTRc 1121": {
+    "id": 1173,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TTRc 1601": {
+    "id": 1174,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 631": {
+    "id": 1175,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 711": {
+    "id": 1176,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 501": {
+    "id": 1177,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 561": {
+    "id": 1178,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 1001": {
+    "id": 1179,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 801": {
+    "id": 1180,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 901": {
+    "id": 1181,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 1121.1": {
+    "id": 1182,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 631.2": {
+    "id": 1183,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 1401": {
+    "id": 1184,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 711.2": {
+    "id": 1185,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 1251.1": {
+    "id": 1186,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 1001.2": {
+    "id": 1187,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 501.2": {
+    "id": 1188,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 561.2": {
+    "id": 1189,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 1121": {
+    "id": 1190,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 801.2": {
+    "id": 1191,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 1251": {
+    "id": 1192,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 901.2": {
+    "id": 1193,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRDc 1401.2": {
+    "id": 1194,
+    "motorSize": "",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRGc 1401": {
+    "id": 1201,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRG/N8 1802B": {
+    "id": 1205,
+    "motorSize": null,
+    "poles": 4,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRG/N8 1802C": {
+    "id": 1207,
+    "motorSize": null,
+    "poles": 4,
+    "power": 250,
+    "frequency": 50
+  },
+  "EVc 1120": {
+    "id": 1214,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EVc 1250": {
+    "id": 1217,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APEc 351": {
+    "id": 1218,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APEc 401": {
+    "id": 1220,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APEc 451": {
+    "id": 1222,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APEc 501": {
+    "id": 1223,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APEc 561": {
+    "id": 1224,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APEc 631": {
+    "id": 1225,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APEc 711": {
+    "id": 1226,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APFc 502": {
+    "id": 1227,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APFc 561": {
+    "id": 1228,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APGc 501": {
+    "id": 1231,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APGc 561": {
+    "id": 1232,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRFc 631": {
+    "id": 1233,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRGc 501": {
+    "id": 1234,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRGc 561": {
+    "id": 1235,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRGc 631": {
+    "id": 1236,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRHc 561": {
+    "id": 1237,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRFc 1801": {
+    "id": 1238,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRGc 1801": {
+    "id": 1239,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRHc 1801": {
+    "id": 1240,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRIc 1801": {
+    "id": 1241,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRLc 1801": {
+    "id": 1242,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 1801": {
+    "id": 1243,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 2001": {
+    "id": 1244,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 1801": {
+    "id": 1248,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 1801": {
+    "id": 1250,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 401": {
+    "id": 1252,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 451": {
+    "id": 1253,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 501": {
+    "id": 1254,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 351": {
+    "id": 1259,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 311": {
+    "id": 1260,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 221": {
+    "id": 1261,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 251": {
+    "id": 1262,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 281": {
+    "id": 1263,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 351": {
+    "id": 1264,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUMc 311": {
+    "id": 1265,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUc 2001": {
+    "id": 1266,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 1801": {
+    "id": 1267,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TRc 2001": {
+    "id": 1272,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPc 251": {
+    "id": 1273,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPc 281": {
+    "id": 1274,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPc 311": {
+    "id": 1276,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPc 351": {
+    "id": 1277,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 2001": {
+    "id": 1278,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EU 1121": {
+    "id": 1280,
+    "motorSize": null,
+    "poles": 4,
+    "power": 90,
+    "frequency": 50
+  },
+  "EU 1122": {
+    "id": 1281,
+    "motorSize": "280S",
+    "poles": 4,
+    "power": 75,
+    "frequency": 50
+  },
+  "EUM 1121": {
+    "id": 1282,
+    "motorSize": null,
+    "poles": 4,
+    "power": 75,
+    "frequency": 50
+  },
+  "EUM 1122": {
+    "id": 1283,
+    "motorSize": null,
+    "poles": 4,
+    "power": 55,
+    "frequency": 50
+  },
+  "EUM 1251": {
+    "id": 1284,
+    "motorSize": "315 M",
+    "poles": 4,
+    "power": 132,
+    "frequency": 50
+  },
+  "EUM 1252": {
+    "id": 1285,
+    "motorSize": "315",
+    "poles": 4,
+    "power": 110,
+    "frequency": 50
+  },
+  "EUM 1401": {
+    "id": 1286,
+    "motorSize": null,
+    "poles": 6,
+    "power": 75,
+    "frequency": 50
+  },
+  "MPR 561": {
+    "id": 1287,
+    "motorSize": "160",
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "TR 631/A": {
+    "id": 1288,
+    "motorSize": "200 L",
+    "poles": 2,
+    "power": 30,
+    "frequency": 50
+  },
+  "TR 632": {
+    "id": 1289,
+    "motorSize": null,
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "TR 561": {
+    "id": 1290,
+    "motorSize": "160 M",
+    "poles": 2,
+    "power": 15,
+    "frequency": 50
+  },
+  "TR 501": {
+    "id": 1291,
+    "motorSize": null,
+    "poles": 2,
+    "power": 11,
+    "frequency": 50
+  },
+  "TR 451": {
+    "id": 1292,
+    "motorSize": null,
+    "poles": 2,
+    "power": 5.5,
+    "frequency": 50
+  },
+  "TR 401": {
+    "id": 1293,
+    "motorSize": null,
+    "poles": 2,
+    "power": 3,
+    "frequency": 50
+  },
+  "TR 1251": {
+    "id": 1294,
+    "motorSize": "315 S",
+    "poles": 4,
+    "power": 110,
+    "frequency": 50
+  },
+  "TR 1252": {
+    "id": 1295,
+    "motorSize": null,
+    "poles": 4,
+    "power": 75,
+    "frequency": 50
+  },
+  "TR 1401": {
+    "id": 1296,
+    "motorSize": null,
+    "poles": 4,
+    "power": 160,
+    "frequency": 50
+  },
+  "TGc 451": {
+    "id": 1297,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TGc 401": {
+    "id": 1298,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "TG 451/A": {
+    "id": 1299,
+    "motorSize": "112 M",
+    "poles": 2,
+    "power": 4,
+    "frequency": 50
+  },
+  "BPR 1121/D": {
+    "id": 1300,
+    "motorSize": "250 M",
+    "poles": 6,
+    "power": 37,
+    "frequency": 50
+  },
+  "BPR 1122/C": {
+    "id": 1301,
+    "motorSize": "225 M",
+    "poles": 6,
+    "power": 30,
+    "frequency": 50
+  },
+  "BPR 1251/D": {
+    "id": 1302,
+    "motorSize": "315 S",
+    "poles": 6,
+    "power": 75,
+    "frequency": 50
+  },
+  "BPR 1252/C": {
+    "id": 1303,
+    "motorSize": "280 M",
+    "poles": 6,
+    "power": 55,
+    "frequency": 50
+  },
+  "BPR 1401/D": {
+    "id": 1304,
+    "motorSize": "315 LA",
+    "poles": 6,
+    "power": 110,
+    "frequency": 50
+  },
+  "BPR 1402/C": {
+    "id": 1305,
+    "motorSize": "315 MA",
+    "poles": 6,
+    "power": 90,
+    "frequency": 50
+  },
+  "TH 631/A *": {
+    "id": 1306,
+    "motorSize": null,
+    "poles": 2,
+    "power": 45,
+    "frequency": 50
+  },
+  "TH 631/B": {
+    "id": 1307,
+    "motorSize": null,
+    "poles": 4,
+    "power": 7.5,
+    "frequency": 50
+  },
+  "THc 401": {
+    "id": 1316,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "THc 451": {
+    "id": 1317,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "THc 501": {
+    "id": 1318,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "THc 561": {
+    "id": 1319,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "THc 631": {
+    "id": 1320,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "THc 711": {
+    "id": 1321,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "THc 801": {
+    "id": 1322,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "THc 901": {
+    "id": 1323,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "THc 1001": {
+    "id": 1324,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "THc 1121": {
+    "id": 1325,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EVc 1400": {
+    "id": 1326,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "APRL/N8 1001": {
+    "id": 1329,
+    "motorSize": null,
+    "poles": 4,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRL/N8 1002": {
+    "id": 1330,
+    "motorSize": null,
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  },
+  "APRL/N8 1121": {
+    "id": 1331,
+    "motorSize": null,
+    "poles": 4,
+    "power": 90,
+    "frequency": 50
+  },
+  "APRL/N8 1122": {
+    "id": 1332,
+    "motorSize": null,
+    "poles": 4,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRL/N8 1251": {
+    "id": 1333,
+    "motorSize": null,
+    "poles": 4,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRL/N8 1252": {
+    "id": 1334,
+    "motorSize": null,
+    "poles": 4,
+    "power": 110,
+    "frequency": 50
+  },
+  "APRL/N8 1401A": {
+    "id": 1335,
+    "motorSize": null,
+    "poles": 4,
+    "power": 250,
+    "frequency": 50
+  },
+  "APRL/N8 1401B": {
+    "id": 1336,
+    "motorSize": null,
+    "poles": 6,
+    "power": 75,
+    "frequency": 50
+  },
+  "APRL/N8 1402A": {
+    "id": 1337,
+    "motorSize": null,
+    "poles": 4,
+    "power": 200,
+    "frequency": 50
+  },
+  "APRL/N8 1402B": {
+    "id": 1338,
+    "motorSize": null,
+    "poles": 6,
+    "power": 55,
+    "frequency": 50
+  },
+  "APRL/N8 1601A": {
+    "id": 1339,
+    "motorSize": null,
+    "poles": 4,
+    "power": 500,
+    "frequency": 50
+  },
+  "APRL/N8 1602A": {
+    "id": 1341,
+    "motorSize": null,
+    "poles": 4,
+    "power": 425,
+    "frequency": 50
+  },
+  "APRL/N8 1601B": {
+    "id": 1342,
+    "motorSize": null,
+    "poles": 6,
+    "power": 160,
+    "frequency": 50
+  },
+  "APRL/N8 1602B": {
+    "id": 1343,
+    "motorSize": null,
+    "poles": 6,
+    "power": 132,
+    "frequency": 50
+  },
+  "APRL/N8 1801": {
+    "id": 1344,
+    "motorSize": null,
+    "poles": 6,
+    "power": 315,
+    "frequency": 50
+  },
+  "APRL/N8 1802": {
+    "id": 1345,
+    "motorSize": null,
+    "poles": 6,
+    "power": 250,
+    "frequency": 50
+  },
+  "TG 401/A": {
+    "id": 1350,
+    "motorSize": "100 LA",
+    "poles": 2,
+    "power": 3,
+    "frequency": 50
+  },
+  "MPRc 351": {
+    "id": 1352,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "MPRc 401": {
+    "id": 1354,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "MPRc 451": {
+    "id": 1355,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "MPRc 501": {
+    "id": 1356,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "MPRc 561": {
+    "id": 1357,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BT 352/C": {
+    "id": 1391,
+    "motorSize": null,
+    "poles": 4,
+    "power": 0.25,
+    "frequency": 50
+  },
+  "BT 401/C": {
+    "id": 1393,
+    "motorSize": null,
+    "poles": 4,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "BT 451/D": {
+    "id": 1394,
+    "motorSize": null,
+    "poles": 4,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "BT 502/C": {
+    "id": 1395,
+    "motorSize": null,
+    "poles": 4,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "BT 501/F": {
+    "id": 1396,
+    "motorSize": null,
+    "poles": 6,
+    "power": 0.55,
+    "frequency": 50
+  },
+  "BT 561/B": {
+    "id": 1397,
+    "motorSize": null,
+    "poles": 4,
+    "power": 4,
+    "frequency": 50
+  },
+  "BT 561/D": {
+    "id": 1398,
+    "motorSize": null,
+    "poles": 6,
+    "power": 1.1,
+    "frequency": 50
+  },
+  "BT 632/C": {
+    "id": 1399,
+    "motorSize": null,
+    "poles": 6,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "BT 632/F": {
+    "id": 1400,
+    "motorSize": null,
+    "poles": 8,
+    "power": 0.75,
+    "frequency": 50
+  },
+  "APRF 502 (NEW!)": {
+    "id": 1406,
+    "motorSize": "90 S",
+    "poles": 2,
+    "power": 1.5,
+    "frequency": 50
+  },
+  "APRF 561 (NEW!)": {
+    "id": 1407,
+    "motorSize": "100 L",
+    "poles": 2,
+    "power": 3,
+    "frequency": 50
+  },
+  "EVc 1600": {
+    "id": 1408,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EUM 633": {
+    "id": 1410,
+    "motorSize": "180",
+    "poles": 2,
+    "power": 22,
+    "frequency": 50
+  },
+  "EVc 400 - 2015": {
+    "id": 1412,
+    "motorSize": "71 A",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EVc 500 - 2015": {
+    "id": 1413,
+    "motorSize": "100 L",
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "BPRc 1601.2 - PF": {
+    "id": 1414,
+    "motorSize": null,
+    "poles": 0,
+    "power": 0,
+    "frequency": 50
+  },
+  "EVL 1250/S": {
+    "id": 1415,
+    "motorSize": "225M",
+    "poles": 4,
+    "power": 45,
+    "frequency": 50
+  }
+}

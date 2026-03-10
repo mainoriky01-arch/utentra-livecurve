@@ -557,6 +557,19 @@
             </div>
         </div>
 
+        <!-- ─── Curve Toggles ─── -->
+        <div class="curve-toggles" style="display:flex; gap:16px; margin-bottom:16px; padding:12px 16px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md);">
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:13px; color:var(--text-secondary);">
+                <input type="checkbox" id="showPower" style="accent-color:#EF4444; width:16px; height:16px;">
+                <span style="color:#EF4444;">●</span> Potenza (kW)
+            </label>
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:13px; color:var(--text-secondary);">
+                <input type="checkbox" id="showEfficiency" style="accent-color:#8B5CF6; width:16px; height:16px;">
+                <span style="color:#8B5CF6;">●</span> Rendimento (%)
+            </label>
+            <span id="curveStatus" style="margin-left:auto; font-size:11px; color:var(--text-muted);">Dati disponibili per serie APE</span>
+        </div>
+
         <!-- ─── Data Cards ─── -->
         <div class="data-grid" role="region" aria-label="Dati tecnici ventilatore">
 
@@ -634,6 +647,7 @@
 <script>
 /* ─── State ─── */
 let CURVES = {};
+let POWER_EFF = {};  // Power and efficiency curves
 let chart = null;
 let currentModel = null;
 let hasOperatingPoint = false;
@@ -767,11 +781,148 @@ function updateAllDisplays() {
     }
 }
 
+/* ─── Crosshair Plugin with Interpolation ─── */
+let crosshairX = null;
+
+const crosshairPlugin = {
+    id: 'crosshair',
+    afterEvent: function(chart, args) {
+        const event = args.event;
+        if (event.type === 'mousemove') {
+            const rect = chart.canvas.getBoundingClientRect();
+            const x = event.x;
+            if (x >= chart.chartArea.left && x <= chart.chartArea.right) {
+                crosshairX = chart.scales.x.getValueForPixel(x);
+            } else {
+                crosshairX = null;
+            }
+            chart.draw();
+        } else if (event.type === 'mouseout') {
+            crosshairX = null;
+            chart.draw();
+        }
+    },
+    afterDraw: function(chart) {
+        if (crosshairX === null) return;
+        
+        const ctx = chart.ctx;
+        const xPixel = chart.scales.x.getPixelForValue(crosshairX);
+        const topY = chart.chartArea.top;
+        const bottomY = chart.chartArea.bottom;
+        
+        // Draw vertical line
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(xPixel, topY);
+        ctx.lineTo(xPixel, bottomY);
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+        ctx.setLineDash([5, 5]);
+        ctx.stroke();
+        ctx.restore();
+        
+        // Collect values for tooltip
+        const values = [];
+        
+        // Draw points on all visible curves at this X
+        chart.data.datasets.forEach((dataset, i) => {
+            if (dataset.hidden || i === 2) return; // Skip hidden and operating point
+            
+            const data = dataset.data;
+            if (!data || data.length < 2) return;
+            
+            // Interpolate Y value
+            let yValue = null;
+            for (let j = 0; j < data.length - 1; j++) {
+                const p1 = data[j];
+                const p2 = data[j + 1];
+                if (crosshairX >= p1.x && crosshairX <= p2.x) {
+                    const t = (crosshairX - p1.x) / (p2.x - p1.x);
+                    yValue = p1.y + t * (p2.y - p1.y);
+                    break;
+                }
+            }
+            
+            if (yValue !== null) {
+                const yAxisId = dataset.yAxisID || 'y';
+                const yPixel = chart.scales[yAxisId].getPixelForValue(yValue);
+                
+                // Draw point
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(xPixel, yPixel, 6, 0, 2 * Math.PI);
+                ctx.fillStyle = dataset.borderColor;
+                ctx.fill();
+                ctx.strokeStyle = '#fff';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+                ctx.restore();
+                
+                values.push({ label: dataset.label, value: yValue, color: dataset.borderColor });
+            }
+        });
+        
+        // Draw custom tooltip
+        if (values.length > 0) {
+            const padding = 10;
+            const lineHeight = 18;
+            const tooltipWidth = 180;
+            const tooltipHeight = 30 + values.length * lineHeight;
+            
+            let tooltipX = xPixel + 15;
+            let tooltipY = topY + 20;
+            
+            // Keep tooltip in bounds
+            if (tooltipX + tooltipWidth > chart.chartArea.right) {
+                tooltipX = xPixel - tooltipWidth - 15;
+            }
+            
+            ctx.save();
+            ctx.fillStyle = 'rgba(8,13,26,0.95)';
+            ctx.strokeStyle = 'rgba(255,255,255,0.1)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.roundRect(tooltipX, tooltipY, tooltipWidth, tooltipHeight, 8);
+            ctx.fill();
+            ctx.stroke();
+            
+            // Title
+            ctx.fillStyle = '#8A9BBF';
+            ctx.font = '11px "Fira Code", monospace';
+            ctx.fillText(`Q: ${crosshairX.toFixed(0)} m³/h`, tooltipX + padding, tooltipY + 18);
+            
+            // Values
+            ctx.font = '12px "Inter", sans-serif';
+            values.forEach((v, i) => {
+                const y = tooltipY + 35 + i * lineHeight;
+                ctx.fillStyle = v.color;
+                ctx.beginPath();
+                ctx.arc(tooltipX + padding + 4, y - 4, 4, 0, 2 * Math.PI);
+                ctx.fill();
+                
+                ctx.fillStyle = '#F0F4FF';
+                let text = v.label + ': ';
+                if (v.label === 'Potenza') {
+                    text += v.value.toFixed(3) + ' kW';
+                } else if (v.label === 'Rendimento') {
+                    text += v.value.toFixed(1) + ' %';
+                } else {
+                    text += v.value.toFixed(2) + ' kg/m²';
+                }
+                ctx.fillText(text, tooltipX + padding + 14, y);
+            });
+            
+            ctx.restore();
+        }
+    }
+};
+
 /* ─── Init Chart ─── */
 function initChart() {
     const ctx = document.getElementById('curveChart').getContext('2d');
     chart = new Chart(ctx, {
         type: 'scatter',
+        plugins: [crosshairPlugin],
         data: {
             datasets: [
                 {
@@ -807,6 +958,34 @@ function initChart() {
                     pointBorderColor: '#FDE68A',
                     showLine: false,
                     data: []
+                },
+                {
+                    label: 'Potenza',
+                    borderColor: '#EF4444',
+                    backgroundColor: 'rgba(239,68,68,0.08)',
+                    showLine: true,
+                    tension: 0.4,
+                    pointRadius: 0,
+                    borderWidth: 2,
+                    borderDash: [5, 3],
+                    fill: false,
+                    hidden: true,
+                    yAxisID: 'yPower',
+                    data: []
+                },
+                {
+                    label: 'Rendimento',
+                    borderColor: '#8B5CF6',
+                    backgroundColor: 'rgba(139,92,246,0.08)',
+                    showLine: true,
+                    tension: 0.4,
+                    pointRadius: 0,
+                    borderWidth: 2,
+                    borderDash: [5, 3],
+                    fill: false,
+                    hidden: true,
+                    yAxisID: 'yEfficiency',
+                    data: []
                 }
             ]
         },
@@ -814,25 +993,16 @@ function initChart() {
             responsive: true,
             maintainAspectRatio: false,
             animation: { duration: 300 },
+            interaction: {
+                mode: 'nearest',
+                axis: 'x',
+                intersect: false
+            },
             plugins: {
                 legend: { display: false },
                 tooltip: {
-                    backgroundColor: 'rgba(8,13,26,0.95)',
-                    borderColor: 'rgba(255,255,255,0.1)',
-                    borderWidth: 1,
-                    titleColor: '#8A9BBF',
-                    bodyColor: '#F0F4FF',
-                    padding: 12,
-                    cornerRadius: 8,
-                    callbacks: {
-                        label: function(ctx) {
-                            if (ctx.dataset.label === 'Punto Operativo') {
-                                return ` Q: ${ctx.parsed.x.toFixed(0)} m³/h — PT: ${ctx.parsed.y.toFixed(2)} kg/m²`;
-                            }
-                            return ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(2)} kg/m²`;
-                        }
-                    }
-                }
+                    enabled: false  // We'll use custom tooltip
+                },
             },
             scales: {
                 x: {
@@ -851,6 +1021,7 @@ function initChart() {
                 },
                 y: {
                     type: 'linear',
+                    position: 'left',
                     title: {
                         display: true,
                         text: 'Pressione P (kg/m²)',
@@ -860,6 +1031,40 @@ function initChart() {
                     grid: { color: 'rgba(255,255,255,0.04)' },
                     ticks: {
                         color: '#4A5A7A',
+                        font: { family: "'Fira Code', monospace", size: 11 }
+                    }
+                },
+                yPower: {
+                    type: 'linear',
+                    position: 'right',
+                    display: false,
+                    title: {
+                        display: true,
+                        text: 'Potenza (kW)',
+                        color: '#EF4444',
+                        font: { family: "'Fira Code', monospace", size: 11, weight: '500' }
+                    },
+                    grid: { drawOnChartArea: false },
+                    ticks: {
+                        color: '#EF4444',
+                        font: { family: "'Fira Code', monospace", size: 11 }
+                    }
+                },
+                yEfficiency: {
+                    type: 'linear',
+                    position: 'right',
+                    display: false,
+                    min: 0,
+                    max: 100,
+                    title: {
+                        display: true,
+                        text: 'Rendimento (%)',
+                        color: '#8B5CF6',
+                        font: { family: "'Fira Code', monospace", size: 11, weight: '500' }
+                    },
+                    grid: { drawOnChartArea: false },
+                    ticks: {
+                        color: '#8B5CF6',
                         font: { family: "'Fira Code', monospace", size: 11 }
                     }
                 }
@@ -873,8 +1078,20 @@ async function loadData() {
     try {
         const res = await fetch('curves.json');
         CURVES = await res.json();
+        
+        // Load power/efficiency curves
+        try {
+            const resPE = await fetch('curves_power_efficiency.json');
+            POWER_EFF = await resPE.json();
+            console.log('Power/Efficiency data loaded:', Object.keys(POWER_EFF));
+        } catch(e) {
+            console.log('Power/Efficiency data not available');
+            POWER_EFF = {};
+        }
+        
         populateSeries();
         initChart();
+        setupCurveToggles();
 
         const totalModels = Object.values(CURVES).reduce((a, s) => a + Object.keys(s).length, 0);
         document.getElementById('modelCount').textContent = totalModels;
@@ -965,6 +1182,9 @@ function loadModel(seriesName, modelName) {
     setStepState(2, 'completed');
     setStepState(3, 'active');
     flowInput.focus();
+    
+    // Load power/efficiency curves if available
+    updatePowerEfficiencyCurves(seriesName, modelName);
 }
 
 /* ─── Interpolate ─── */
@@ -1314,6 +1534,74 @@ loadData().then(() => {
         }, 100);
     }
 });
+
+/* ─── Curve Toggles for Power/Efficiency ─── */
+function setupCurveToggles() {
+    const showPower = document.getElementById('showPower');
+    const showEfficiency = document.getElementById('showEfficiency');
+    
+    showPower.addEventListener('change', function() {
+        chart.data.datasets[3].hidden = !this.checked;
+        chart.options.scales.yPower.display = this.checked;
+        chart.update();
+    });
+    
+    showEfficiency.addEventListener('change', function() {
+        chart.data.datasets[4].hidden = !this.checked;
+        chart.options.scales.yEfficiency.display = this.checked;
+        chart.update();
+    });
+}
+
+function updatePowerEfficiencyCurves(series, model) {
+    const status = document.getElementById('curveStatus');
+    
+    // Try different model key formats
+    // curves.json uses "APE 351/A", power_efficiency may use "351/A"
+    let modelKey = model;
+    let data = null;
+    
+    if (POWER_EFF[series]) {
+        // Try exact match first
+        if (POWER_EFF[series][model]) {
+            data = POWER_EFF[series][model];
+        }
+        // Try without series prefix (e.g., "APE 351/A" -> "351/A")
+        else if (model.includes(' ')) {
+            const shortModel = model.split(' ').slice(1).join(' ');
+            if (POWER_EFF[series][shortModel]) {
+                data = POWER_EFF[series][shortModel];
+            }
+        }
+    }
+    
+    if (!data) {
+        chart.data.datasets[3].data = [];
+        chart.data.datasets[4].data = [];
+        status.textContent = `Dati P/η non disponibili per ${series}`;
+        status.style.color = 'var(--text-muted)';
+        return;
+    }
+    
+    // Power curve: convert [[flow, kW], ...] to [{x, y}, ...]
+    if (data.power && data.power.length > 0) {
+        chart.data.datasets[3].data = data.power.map(p => ({ x: p[0], y: p[1] }));
+    } else {
+        chart.data.datasets[3].data = [];
+    }
+    
+    // Efficiency curve: convert [[flow, %], ...] to [{x, y}, ...]
+    if (data.efficiency && data.efficiency.length > 0) {
+        chart.data.datasets[4].data = data.efficiency.map(p => ({ x: p[0], y: p[1] }));
+    } else {
+        chart.data.datasets[4].data = [];
+    }
+    
+    status.textContent = `✓ Dati P/η disponibili`;
+    status.style.color = 'var(--green-400)';
+    
+    chart.update();
+}
 </script>
 </body>
 </html>
